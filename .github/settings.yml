@@ -1,5 +1,5 @@
 repository:
-  private: true
+  private: false
   has_issues: true
   has_projects: false
   has_wiki: false
