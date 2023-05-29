@@ -8,24 +8,24 @@ updates:
   - package-ecosystem: bundler
     directory: "/"
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: direct
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: direct
   - package-ecosystem: docker
     directory: "/"
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: direct
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: direct
