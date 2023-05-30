@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "config", "4.2.0"
+
+gem "haml-rails", "2.1.0"
