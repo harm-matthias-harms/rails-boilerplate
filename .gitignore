@@ -37,3 +37,8 @@
 
 # Ignore IDEs
 .idea
+
+# Config gem
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
