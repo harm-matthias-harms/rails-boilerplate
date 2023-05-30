@@ -28,7 +28,7 @@ gem "stimulus-rails", "1.2.1"
 gem "cssbundling-rails", "1.1.2"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder", "2.11.5"
+# gem "jbuilder", "2.11.5"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "5.0.6"
@@ -72,5 +72,4 @@ group :test do
 end
 
 gem "config", "4.2.0"
-
 gem "haml-rails", "2.1.0"
