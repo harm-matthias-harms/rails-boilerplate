@@ -71,5 +71,11 @@ group :test do
   gem "webdrivers", "5.2.0"
 end
 
+group :development do
+  gem "lookbook", "2.0.3"
+  gem "listen", "3.8.0"
+end
+
 gem "config", "4.2.0"
 gem "haml-rails", "2.1.0"
+gem "view_component", "3.0.0"
