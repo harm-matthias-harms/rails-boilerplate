@@ -53,7 +53,9 @@ Config.setup do |config|
       required(:username).filled(:string)
       required(:password).filled(:string)
     end
-    required(:redis_url).filled(:string)
+    required(:redis).schema do
+      required(:url).filled(:string)
+    end
   end
 
   # Evaluate ERB in YAML config files at load time.

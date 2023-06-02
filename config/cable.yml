@@ -1,11 +1,11 @@
 development:
   adapter: redis
-  url: <%= Settings.redis_url %>
+  url: <%= Settings.redis.url %>
 
 test:
   adapter: test
 
 production:
   adapter: redis
-  url: <%= Settings.redis_url %>
+  url: <%= Settings.redis.url %>
   channel_prefix: <%= "#{Settings.app_name}_production" %>
