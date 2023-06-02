@@ -81,3 +81,4 @@ gem "haml-rails", "2.1.0"
 gem "view_component", "3.0.0"
 
 gem "pundit", "2.3.0"
+gem "sidekiq", "7.1.1"

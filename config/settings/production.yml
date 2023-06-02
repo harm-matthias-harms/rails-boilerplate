@@ -3,4 +3,5 @@ database:
   port: 5432
   username:
   password:
-redis_url:
+redis:
+  url:

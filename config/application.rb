@@ -11,6 +11,8 @@ module RailsBoilerplate
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.active_job.queue_adapter = :sidekiq
+
     config.generators do |generate|
       generate.assets false
       generate.helper false
