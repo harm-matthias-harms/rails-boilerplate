@@ -72,7 +72,7 @@ group :test do
 end
 
 group :development do
-  gem "lookbook", "2.0.3"
+  gem "lookbook", "2.0.4"
   gem "listen", "3.8.0"
 end
 
