@@ -276,7 +276,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    view_component (3.0.0)
+    view_component (3.1.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -325,7 +325,7 @@ DEPENDENCIES
   stimulus-rails (= 1.2.1)
   turbo-rails (= 1.4.0)
   tzinfo-data (= 1.2023.3)
-  view_component (= 3.0.0)
+  view_component (= 3.1.0)
   web-console (= 4.2.0)
   webdrivers (= 5.2.0)
 
