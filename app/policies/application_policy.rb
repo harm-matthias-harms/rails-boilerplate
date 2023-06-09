@@ -11,10 +11,10 @@ class ApplicationPolicy
   end
 
   alias_method :show?, :index?
-  alias_method :new?, :create?
   alias_method :create?, :index?
-  alias_method :edit?, :update?
+  alias_method :new?, :create?
   alias_method :update?, :index?
+  alias_method :edit?, :update?
   alias_method :destroy?, :index?
 
   class Scope
