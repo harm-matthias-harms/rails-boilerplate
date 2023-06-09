@@ -1,0 +1,35 @@
+pre-commit:
+  parallel: true
+  commands:
+    bundle_audit:
+      run: bundle audit --update
+    bundle_check:
+      run: bundle check
+    yarn_audit:
+      run: yarn audit
+    fasterer:
+      run: bundle exec fasterer
+pre-push:
+  parallel: true
+  commands:
+post-checkout:
+  parallel: true
+  commands:
+    bundle_install:
+      run: bundle install
+    yarn_install:
+      run: yarn install
+post-merge:
+  parallel: true
+  commands:
+    bundle_install:
+      run: bundle install
+    yarn_install:
+      run: yarn install
+post-rewrite:
+  parallel: true
+  commands:
+    bundle_install:
+      run: bundle install
+    yarn_install:
+      run: yarn install

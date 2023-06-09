@@ -74,6 +74,10 @@ end
 group :development do
   gem "lookbook", "2.0.4"
   gem "listen", "3.8.0"
+
+  gem "annotate", "3.2.0"
+  gem "bundler-audit", "0.9.1"
+  gem "fasterer", "0.10.1"
 end
 
 gem "config", "4.2.0"
@@ -83,5 +87,3 @@ gem "pundit", "2.3.0"
 gem "sidekiq", "7.1.1"
 gem "service_actor", "3.7.0"
 gem "service_actor-rails", "1.0.0"
-
-gem "annotate", "3.2.0"
