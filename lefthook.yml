@@ -9,6 +9,8 @@ pre-commit:
       run: yarn audit
     fasterer:
       run: bundle exec fasterer
+    brakeman:
+      run: bundle exec brakeman --color --no-pager
 pre-push:
   parallel: true
   commands:
