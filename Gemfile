@@ -83,3 +83,5 @@ gem "pundit", "2.3.0"
 gem "sidekiq", "7.1.1"
 gem "service_actor", "3.7.0"
 gem "service_actor-rails", "1.0.0"
+
+gem "annotate", "3.2.0"
