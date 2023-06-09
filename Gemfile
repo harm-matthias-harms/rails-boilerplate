@@ -78,6 +78,7 @@ group :development do
   gem "annotate", "3.2.0"
   gem "bundler-audit", "0.9.1"
   gem "fasterer", "0.10.1"
+  gem "brakeman", "6.0.0"
 end
 
 gem "config", "4.2.0"
