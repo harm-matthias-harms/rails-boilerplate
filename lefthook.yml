@@ -9,6 +9,8 @@ pre-commit:
       run: yarn audit
     lint:
       run: bundle exec rubocop
+    lint_haml:
+      run: bundle exec haml-lint
     lint_js:
       run: yarn lint
     lint_css:
