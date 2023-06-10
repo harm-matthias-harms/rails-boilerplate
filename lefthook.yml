@@ -13,7 +13,9 @@ pre-commit:
       run: bundle exec brakeman --color --no-pager
 pre-push:
   parallel: true
-  commands:
+  scripts:
+    branch_validation.sh:
+      runner: bash
 post-checkout:
   parallel: true
   commands:
