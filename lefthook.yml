@@ -17,6 +17,8 @@ pre-commit:
       run: yarn lint:css
     brakeman:
       run: bundle exec brakeman --no-pager
+    i18n-tasks:
+      run: bundle exec i18n-tasks health
 pre-push:
   parallel: true
   scripts:
