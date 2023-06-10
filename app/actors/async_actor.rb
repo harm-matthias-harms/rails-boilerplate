@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AsyncActor < ApplicationActor
   class << self
     attr_accessor :target_actor

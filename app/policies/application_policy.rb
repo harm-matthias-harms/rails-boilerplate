@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationPolicy
   attr_reader :user, :record
 
@@ -10,12 +12,12 @@ class ApplicationPolicy
     false
   end
 
-  alias_method :show?, :index?
-  alias_method :create?, :index?
-  alias_method :new?, :create?
-  alias_method :update?, :index?
-  alias_method :edit?, :update?
-  alias_method :destroy?, :index?
+  alias show? index?
+  alias create? index?
+  alias new? create?
+  alias update? index?
+  alias edit? update?
+  alias destroy? index?
 
   class Scope
     def initialize(user, scope)

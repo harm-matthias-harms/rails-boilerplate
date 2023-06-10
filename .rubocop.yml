@@ -1,0 +1,30 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-capybara
+  - rubocop-factory_bot
+
+AllCops:
+  NewCops: enable
+Layout/BeginEndAlignment:
+  EnforcedStyleAlignWith: begin
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+Rails/ActionOrder:
+  ExpectedOrder:
+    - index
+    - show
+    - new
+    - create
+    - edit
+    - update
+    - destroy
+Rails/LexicallyScopedActionFilter:
+  Exclude:
+    - app/controllers/application_controller.rb
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+# class module
