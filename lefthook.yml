@@ -7,14 +7,14 @@ pre-commit:
       run: bundle check
     yarn_audit:
       run: yarn audit
-    fasterer:
-      run: bundle exec fasterer
-    brakeman:
-      run: bundle exec brakeman --color --no-pager
+    lint:
+      run: bundle exec rubocop
     lint_js:
       run: yarn lint
     lint_css:
       run: yarn lint:css
+    brakeman:
+      run: bundle exec brakeman --no-pager
 pre-push:
   parallel: true
   scripts:

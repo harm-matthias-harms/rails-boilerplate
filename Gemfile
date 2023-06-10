@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -78,7 +80,6 @@ group :development do
   gem 'annotate', '3.2.0'
   gem 'brakeman', '6.0.0', require: false
   gem 'bundler-audit', '0.9.1', require: false
-  gem 'fasterer', '0.10.1', require: false
   gem 'rubocop', '1.52.0', require: false
   gem 'rubocop-capybara', '2.18.0', require: false
   gem 'rubocop-factory_bot', '2.23.1', require: false
