@@ -15,17 +15,19 @@ Bundler.require(*Rails.groups)
 #
 # config.time_zone = "Central Time (US & Canada)"
 # config.eager_load_paths << Rails.root.join("extras")
-class RailsBoilerplate::Application < Rails::Application
-  # Initialize configuration defaults for originally generated Rails version.
-  config.load_defaults 7.0
+module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.0
 
-  config.active_job.queue_adapter = :sidekiq
+    config.active_job.queue_adapter = :sidekiq
 
-  config.generators do |generate|
-    generate.assets false
-    generate.helper false
-    generate.stylesheets false
+    config.generators do |generate|
+      generate.assets false
+      generate.helper false
+      generate.stylesheets false
+    end
+
+    config.view_component.generate.preview = true
   end
-
-  config.view_component.generate.preview = true
 end

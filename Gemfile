@@ -77,7 +77,7 @@ group :development do
   gem 'listen', '3.8.0'
   gem 'lookbook', '2.0.4'
 
-  gem 'annotate', '3.2.0'
+  gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.0.0', require: false
   gem 'bundler-audit', '0.9.1', require: false
   gem 'rubocop', '1.52.0', require: false
