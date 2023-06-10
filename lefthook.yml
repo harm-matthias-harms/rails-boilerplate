@@ -11,6 +11,8 @@ pre-commit:
       run: bundle exec fasterer
     brakeman:
       run: bundle exec brakeman --color --no-pager
+    lint_js:
+      run: yarn lint
 pre-push:
   parallel: true
   scripts:
