@@ -1,6 +1,12 @@
 {
   "name": "app",
   "private": "true",
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.pcss -o ./app/assets/builds/application.css --minify",
+    "lint": "standard",
+    "lint:css": "stylelint app/assets/stylesheets"
+  },
   "dependencies": {
     "@hotwired/stimulus": "3.2.1",
     "@hotwired/turbo-rails": "7.3.0",
@@ -10,12 +16,28 @@
     "postcss": "8.4.24",
     "tailwindcss": "3.3.2"
   },
-  "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
-    "lint": "standard"
-  },
   "devDependencies": {
-    "standard": "^17.1.0"
+    "standard": "17.1.0",
+    "stylelint": "15.7.0",
+    "stylelint-config-standard-scss": "9.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+      "import-notation": "string",
+      "comment-empty-line-before": "never",
+      "at-rule-no-unknown": null,
+      "scss/at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "tailwind"
+          ]
+        }
+      ]
+    },
+    "ignoreFiles": [
+      "!**/*.pcss"
+    ]
   }
 }

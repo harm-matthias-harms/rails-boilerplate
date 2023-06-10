@@ -13,6 +13,8 @@ pre-commit:
       run: bundle exec brakeman --color --no-pager
     lint_js:
       run: yarn lint
+    lint_css:
+      run: yarn lint:css
 pre-push:
   parallel: true
   scripts:
