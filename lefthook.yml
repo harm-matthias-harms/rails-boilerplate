@@ -1,47 +1,37 @@
 pre-commit:
   parallel: true
   commands:
-    bundle_audit:
+    bundle audit:
       run: bundle audit --update
-    bundle_check:
+    bundle check:
       run: bundle check
-    yarn_audit:
+    yarn audit:
       run: yarn audit
-    lint:
+    lint ruby:
       run: bundle exec rubocop
-    lint_haml:
+    lint haml:
       run: bundle exec haml-lint
-    lint_js:
+    lint js:
       run: yarn lint
-    lint_css:
+    lint css:
       run: yarn lint:css
     brakeman:
       run: bundle exec brakeman --no-pager
-    i18n-tasks:
+    i18n tasks:
       run: bundle exec i18n-tasks health
 pre-push:
   parallel: true
   scripts:
     branch_validation.sh:
       runner: bash
-post-checkout:
+post-checkout: &post-checkoout
   parallel: true
   commands:
-    bundle_install:
+    git pull:
+      run: git pull
+    bundle install:
       run: bundle install
-    yarn_install:
+    yarn install:
       run: yarn install
-post-merge:
-  parallel: true
-  commands:
-    bundle_install:
-      run: bundle install
-    yarn_install:
-      run: yarn install
-post-rewrite:
-  parallel: true
-  commands:
-    bundle_install:
-      run: bundle install
-    yarn_install:
-      run: yarn install
+post-merge: *post-checkoout
+post-rewrite: *post-checkoout
