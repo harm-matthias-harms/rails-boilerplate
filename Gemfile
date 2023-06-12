@@ -74,6 +74,7 @@ group :test do
 
   gem 'fuubar', '2.5.1', require: false
   gem 'rspec-rails', '6.0.3'
+  gem 'simplecov', '0.22.0', require: false
 end
 
 group :development do
