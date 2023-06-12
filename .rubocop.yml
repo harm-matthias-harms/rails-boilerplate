@@ -5,6 +5,9 @@ require:
   - rubocop-capybara
   - rubocop-factory_bot
 
+inherit_gem:
+  pundit: config/rubocop-rspec.yml
+
 AllCops:
   NewCops: enable
 Layout/BeginEndAlignment:
