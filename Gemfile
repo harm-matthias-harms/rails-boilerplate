@@ -75,7 +75,7 @@ end
 
 group :development do
   gem 'listen', '3.8.0'
-  gem 'lookbook', '2.0.4'
+  gem 'lookbook', '2.0.5'
 
   gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.0.0', require: false
