@@ -29,5 +29,9 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
     end
 
     config.view_component.generate.preview = true
+    config.view_component.preview_paths << Rails.root.join('spec/components/previews')
+    config.lookbook.project_name = Settings.app.name
+    config.lookbook.preview_paths << Rails.root.join('spec/components/previews')
+    config.lookbook.page_paths << Rails.root.join('spec/components/previews/pages')
   end
 end

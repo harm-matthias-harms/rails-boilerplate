@@ -8,4 +8,4 @@ test:
 production:
   adapter: redis
   url: <%= Settings.redis.url %>
-  channel_prefix: <%= "#{Settings.app_name}_production" %>
+  channel_prefix: <%= "#{Settings.app.name}_production" %>
