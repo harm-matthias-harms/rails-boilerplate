@@ -74,6 +74,7 @@ group :test do
   gem 'selenium-webdriver', '4.9.1'
   gem 'webdrivers', '5.2.0'
 
+  gem 'database_cleaner-active_record', '2.1.0'
   gem 'fuubar', '2.5.1', require: false
   gem 'rspec-rails', '6.0.3'
   gem 'simplecov', '0.22.0', require: false
