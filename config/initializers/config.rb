@@ -48,7 +48,9 @@ Config.setup do |config|
 
   # Validate presence and type of specific config values. Check https://github.com/dry-rb/dry-validation for details.
   config.schema do
-    required(:app_name).filled(:string)
+    required(:app).schema do
+      required(:name).filled(:string)
+    end
     required(:database).schema do
       required(:host).filled(:string)
       required(:port).filled(:integer)

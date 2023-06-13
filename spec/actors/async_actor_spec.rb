@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+RSpec.describe AsyncActor do
+  subject(:actor) { described_class.new({}) }
 
-RSpec.describe AsyncActor, type: :actor do
   describe '.call' do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it 'calls actor job' do
+      expect(ActorJob).to receive(:perform_later)
+
+      actor.call
+    end
   end
 end

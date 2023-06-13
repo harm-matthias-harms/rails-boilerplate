@@ -9,12 +9,12 @@ default: &default
 
 development:
   <<: *default
-  database: <%= "#{Settings.app_name}_development" %>
+  database: <%= "#{Settings.app.name}_development" %>
 
 test:
   <<: *default
-  database: <%= "#{Settings.app_name}_test" %>
+  database: <%= "#{Settings.app.name}_test" %>
 
 production:
   <<: *default
-  database: <%= "#{Settings.app_name}_production" %>
+  database: <%= "#{Settings.app.name}_production" %>

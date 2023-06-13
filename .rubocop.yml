@@ -5,6 +5,9 @@ require:
   - rubocop-capybara
   - rubocop-factory_bot
 
+inherit_gem:
+  pundit: config/rubocop-rspec.yml
+
 AllCops:
   NewCops: enable
 Layout/BeginEndAlignment:
@@ -23,6 +26,8 @@ Rails/ActionOrder:
 Rails/LexicallyScopedActionFilter:
   Exclude:
     - app/controllers/application_controller.rb
+RSpec/MessageSpies:
+  EnforcedStyle: receive
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
 Style/Documentation:

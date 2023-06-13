@@ -29,5 +29,6 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
     end
 
     config.view_component.generate.preview = true
+    config.view_component.preview_paths << Rails.root.join('spec/components/previews')
   end
 end

@@ -1,1 +1,2 @@
-app_name: rails_boilerplate
+app:
+  name: rails_boilerplate
