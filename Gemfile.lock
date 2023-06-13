@@ -360,6 +360,8 @@ GEM
     service_actor-rails (1.0.0)
       rails (>= 4.2)
       service_actor
+    shoulda-matchers (5.3.0)
+      activesupport (>= 5.2.0)
     sidekiq (7.1.1)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
@@ -448,6 +450,7 @@ DEPENDENCIES
   selenium-webdriver (= 4.9.1)
   service_actor (= 3.7.0)
   service_actor-rails (= 1.0.0)
+  shoulda-matchers (= 5.3.0)
   sidekiq (= 7.1.1)
   simplecov (= 0.22.0)
   stimulus-rails (= 1.2.1)
