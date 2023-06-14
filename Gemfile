@@ -87,7 +87,6 @@ group :development do
 
   gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.0.0', require: false
-  gem 'bundler-audit', '0.9.1', require: false
   gem 'haml_lint', '0.45.0', require: false
   gem 'i18n-tasks', '1.0.12', require: false
   gem 'rubocop', '1.52.0', require: false
