@@ -5,7 +5,7 @@ on:
   workflow_call:
 
 jobs:
-  bundle_check:
+  bundle-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,3 +13,27 @@ jobs:
         with:
           bundler-cache: true
       - run: bundle check
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec rubocop
+  haml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec haml-lint
+  brakeman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec brakeman
