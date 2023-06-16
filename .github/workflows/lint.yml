@@ -1,0 +1,15 @@
+name: Lint
+
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  bundle_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle check
