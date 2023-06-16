@@ -13,4 +13,17 @@ jobs:
         with:
           ruby-version: '.tool-versions'
           bundler-cache: true
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: yarn
+      - run: bin/rails prepare
       - run: bundle exec rspec
+    services:
+      postgres:
+        image: postgres:15.1-alpine3.17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        ports:
+          - 5432:5432
