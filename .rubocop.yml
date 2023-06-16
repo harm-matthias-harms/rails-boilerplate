@@ -11,7 +11,7 @@ inherit_gem:
 AllCops:
   NewCops: enable
   Exclude:
-    - 'vendor/'
+    - vendor/bundle/**/*
 Layout/BeginEndAlignment:
   EnforcedStyleAlignWith: begin
 Layout/BlockAlignment:
