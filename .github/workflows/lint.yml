@@ -29,6 +29,14 @@ jobs:
         with:
           bundler-cache: true
       - run: bundle exec haml-lint
+  i18n-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec i18n-tasks health
   brakeman:
     runs-on: ubuntu-latest
     steps:
@@ -37,3 +45,19 @@ jobs:
         with:
           bundler-cache: true
       - run: bundle exec brakeman
+  standardjs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: yarn
+      - run: yarn lint
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          cache: yarn
+      - run: yarn lint:css
