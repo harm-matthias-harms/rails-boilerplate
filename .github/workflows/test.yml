@@ -17,7 +17,7 @@ jobs:
         with:
           node-version-file: '.tool-versions'
           cache: yarn
-      - run: bin/rails prepare
+      - run: bin/rails db:prepare
       - run: bundle exec rspec
     services:
       postgres:
