@@ -13,7 +13,6 @@ repository:
   delete_branch_on_merge: true
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
-  allow_forking: true
   web_commit_signoff_required: true
 
 labels:
