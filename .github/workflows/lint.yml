@@ -1,0 +1,72 @@
+name: Lint
+
+on:
+  pull_request:
+  workflow_call:
+
+jobs:
+  bundle-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bundle check
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bundle exec rubocop
+  haml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bundle exec haml-lint
+  i18n-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bundle exec i18n-tasks health
+  brakeman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bundle exec brakeman
+  standardjs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint:css

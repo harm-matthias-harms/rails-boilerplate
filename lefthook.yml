@@ -19,7 +19,7 @@ pre-commit:
       glob: "{app,config/locales}/**/*.{haml,rb,yml}"
       run: bundle exec i18n-tasks health
     brakeman:
-      run: bundle exec brakeman -A --no-pager
+      run: bundle exec brakeman
 pre-push:
   parallel: true
   scripts:
