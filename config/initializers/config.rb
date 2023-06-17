@@ -47,18 +47,20 @@ Config.setup do |config|
   # config.env_parse_values = true
 
   # Validate presence and type of specific config values. Check https://github.com/dry-rb/dry-validation for details.
-  config.schema do
-    required(:app).schema do
-      required(:name).filled(:string)
-    end
-    required(:database).schema do
-      required(:host).filled(:string)
-      required(:port).filled(:integer)
-      required(:username).filled(:string)
-      required(:password).filled(:string)
-    end
-    required(:redis).schema do
-      required(:url).filled(:string)
+  unless ENV.fetch('SETTINGS_SKIP_VALIDATION', false)
+    config.schema do
+      required(:app).schema do
+        required(:name).filled(:string)
+      end
+      required(:database).schema do
+        required(:host).filled(:string)
+        required(:port).filled(:integer)
+        required(:username).filled(:string)
+        required(:password).filled(:string)
+      end
+      required(:redis).schema do
+        required(:url).filled(:string)
+      end
     end
   end
 
