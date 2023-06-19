@@ -93,7 +93,7 @@ group :development do
   gem 'rubocop-capybara', '2.18.0', require: false
   gem 'rubocop-factory_bot', '2.23.1', require: false
   gem 'rubocop-performance', '1.18.0', require: false
-  gem 'rubocop-rails', '2.19.1', require: false
+  gem 'rubocop-rails', '2.20.0', require: false
   gem 'rubocop-rspec', '2.22.0', require: false
 end
 
