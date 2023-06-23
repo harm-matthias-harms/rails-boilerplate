@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe ApplicationComponent do
+RSpec.describe ApplicationComponent, type: :component do
   it 'sets kwargs' do
     component = described_class.new(foo: 'bar')
 
