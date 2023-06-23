@@ -23,6 +23,8 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
     config.active_job.queue_adapter = :sidekiq
 
     config.generators do |generate|
+      generate.orm :active_record, primary_key_type: :uuid
+
       generate.assets false
       generate.helper false
       generate.stylesheets false
