@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe ApplicationPolicy do
+RSpec.describe ApplicationPolicy, type: :policy do
   subject(:policy) { described_class }
 
   permissions '.scope' do
