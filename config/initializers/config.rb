@@ -63,14 +63,16 @@ Config.setup do |config|
       required(:redis).schema do
         required(:url).filled(:string)
       end
-      required(:mail).schema do
-        required(:sender).filled(:string)
-        required(:address).filled(:string)
-        required(:port).filled(:integer)
-        required(:username).filled(:string)
-        required(:password).filled(:string)
-        required(:authentication).filled(:string)
-        required(:enable_starttls_auto).filled(:bool)
+      unless Rails.env.test?
+        required(:mail).schema do
+          required(:sender).filled(:string)
+          required(:address).filled(:string)
+          required(:port).filled(:integer)
+          required(:username).filled(:string)
+          required(:password).filled(:string)
+          required(:authentication).filled(:string)
+          required(:enable_starttls_auto).filled(:bool)
+        end
       end
     end
   end
