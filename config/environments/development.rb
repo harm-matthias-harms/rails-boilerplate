@@ -43,6 +43,17 @@ Rails.application.configure do # rubocop:disable Metrics/BlockLength
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: Settings.app.host }
+  config.action_mailer.smtp_settings = {
+    address: Settings.mail.address,
+    port: Settings.mail.port,
+    user_name: Settings.mail.username,
+    password: Settings.mail.password,
+    authentication: Settings.mail.authentication,
+    enable_starttls_auto: Settings.mail.enable_starttls_auto
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

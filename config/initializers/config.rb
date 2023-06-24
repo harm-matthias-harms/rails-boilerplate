@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 Config.setup do |config|
   # Name of the constant exposing loaded settings
   config.const_name = 'Settings'
@@ -51,6 +52,7 @@ Config.setup do |config|
     config.schema do
       required(:app).schema do
         required(:name).filled(:string)
+        required(:host).filled(:string)
       end
       required(:database).schema do
         required(:host).filled(:string)
@@ -61,6 +63,15 @@ Config.setup do |config|
       required(:redis).schema do
         required(:url).filled(:string)
       end
+      required(:mail).schema do
+        required(:sender).filled(:string)
+        required(:address).filled(:string)
+        required(:port).filled(:integer)
+        required(:username).filled(:string)
+        required(:password).filled(:string)
+        required(:authentication).filled(:string)
+        required(:enable_starttls_auto).filled(:bool)
+      end
     end
   end
 
@@ -68,3 +79,4 @@ Config.setup do |config|
   #
   config.evaluate_erb_in_yaml = true
 end
+# rubocop:enable Metrics/BlockLength
