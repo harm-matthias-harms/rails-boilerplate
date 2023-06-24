@@ -63,9 +63,9 @@ Config.setup do |config|
       required(:redis).schema do
         required(:url).filled(:string)
       end
-      unless Rails.env.test?
-        required(:mail).schema do
-          required(:sender).filled(:string)
+      required(:mail).schema do
+        required(:sender).filled(:string)
+        unless Rails.env.test?
           required(:address).filled(:string)
           required(:port).filled(:integer)
           required(:username).filled(:string)
