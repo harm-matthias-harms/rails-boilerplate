@@ -5,3 +5,5 @@ database:
   password: postgres
 redis:
   url: redis://localhost:6379/1
+mail:
+  sender: noreply@rails-boilerplate.io
