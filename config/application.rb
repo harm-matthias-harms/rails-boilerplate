@@ -28,6 +28,7 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
       generate.assets false
       generate.helper false
       generate.stylesheets false
+      generate.view_specs false
     end
 
     config.view_component.generate.preview = true
