@@ -21,6 +21,7 @@ jobs:
       - run: bin/rails db:prepare
         env:
           RAILS_ENV: test
+      - run: bin/rails assets:precompile
       - run: bundle exec rspec
     services:
       postgres:
