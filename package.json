@@ -1,11 +1,10 @@
 {
   "name": "app",
   "private": "true",
+  "type": "module",
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "yarn build:tailwind && yarn build:font",
-    "build:tailwind": "tailwindcss -i ./app/assets/stylesheets/application.pcss -o ./app/assets/builds/application.css --minify",
-    "build:font": "esbuild --bundle --sourcemap ./app/assets/stylesheets/fonts/*.css --outdir=./app/assets/builds/fonts --loader:.woff=file --loader:.woff2=file",
+    "build": "node esbuild.config.js",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.pcss -o ./app/assets/builds/application.css --minify",
     "lint": "standard",
     "lint:css": "stylelint app/assets/stylesheets"
   },
