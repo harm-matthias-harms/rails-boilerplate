@@ -14,22 +14,23 @@ async function buildContext (options) {
   }
 }
 
-buildContext({
-  entryPoints: ['application.js'],
+const baseConfig = {
   sourcemap: true,
   bundle: true,
   minify: true,
-  logLevel: 'debug',
+  logLevel: 'debug'
+}
+
+buildContext({
+  ...baseConfig,
+  entryPoints: ['application.js'],
   outdir: path.join(process.cwd(), 'app/assets/builds'),
   absWorkingDir: path.join(process.cwd(), 'app/javascript')
 })
 
 buildContext({
+  ...baseConfig,
   entryPoints: ['nunito.css'],
-  sourcemap: true,
-  bundle: true,
-  minify: true,
-  logLevel: 'debug',
   outdir: path.join(process.cwd(), 'app/assets/builds/fonts'),
   absWorkingDir: path.join(process.cwd(), 'app/assets/fonts'),
   assetNames: '[name]-00000000.digested',
