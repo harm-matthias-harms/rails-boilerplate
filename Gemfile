@@ -27,7 +27,7 @@ gem 'turbo-rails', '1.4.0'
 gem 'stimulus-rails', '1.2.1'
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
-gem 'cssbundling-rails', '1.1.2'
+gem 'cssbundling-rails', '1.2.0'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder", "2.11.5"
