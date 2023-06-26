@@ -14,7 +14,7 @@ async function buildContext (options) {
   }
 }
 
-const baseConfig = {
+const globalOptions = {
   sourcemap: true,
   bundle: true,
   minify: true,
@@ -22,14 +22,14 @@ const baseConfig = {
 }
 
 buildContext({
-  ...baseConfig,
+  ...globalOptions,
   entryPoints: ['application.js'],
   outdir: path.join(process.cwd(), 'app/assets/builds'),
   absWorkingDir: path.join(process.cwd(), 'app/javascript')
 })
 
 buildContext({
-  ...baseConfig,
+  ...globalOptions,
   entryPoints: ['nunito.css'],
   outdir: path.join(process.cwd(), 'app/assets/builds/fonts'),
   absWorkingDir: path.join(process.cwd(), 'app/assets/fonts'),
