@@ -5,7 +5,7 @@ pre-commit:
       run: bundle check
     lint ruby:
       glob: "*.rb"
-      run: bundle exec rubocop {staged_files}
+      run: bundle exec rubocop --force-exclusion {staged_files}
     lint haml:
       glob: "*.haml"
       run: bundle exec haml-lint {staged_files}
