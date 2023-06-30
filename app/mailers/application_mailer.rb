@@ -2,6 +2,7 @@
 
 class ApplicationMailer < ActionMailer::Base
   helper ViewComponentsHelper
+
   layout 'mailer'
 
   default from: Settings.mail.sender
