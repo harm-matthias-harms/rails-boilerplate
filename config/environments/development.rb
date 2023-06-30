@@ -44,7 +44,6 @@ Rails.application.configure do # rubocop:disable Metrics/BlockLength
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: Settings.app.host }
   config.action_mailer.smtp_settings = {
     address: Settings.mail.address,
     port: Settings.mail.port,
