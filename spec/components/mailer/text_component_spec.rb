@@ -4,9 +4,9 @@ RSpec.describe Mailer::TextComponent, type: :component do
   subject(:text) { described_class.new }
 
   it 'renders' do
-    render_inline(text) { 'Test' }
+    render_inline(text) { 'test' }
 
-    expect(page).to have_text('Test')
+    expect(page).to have_text('test')
   end
 
   describe '.color' do
