@@ -13,7 +13,7 @@
     "@hotwired/stimulus": "3.2.1",
     "@hotwired/turbo-rails": "7.3.0",
     "autoprefixer": "10.4.14",
-    "daisyui": "3.1.7",
+    "daisyui": "3.2.1",
     "esbuild": "0.18.11",
     "postcss": "8.4.25",
     "sass": "1.63.6",
