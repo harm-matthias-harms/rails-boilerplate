@@ -11,12 +11,20 @@ inherit_gem:
 AllCops:
   NewCops: enable
   Exclude:
+    - db/schema.rb
+    - node_modules/**/*
     - bin/**/*
-    - vendor/bundle/**/*
+    - vendor/**/*
+
 Layout/BeginEndAlignment:
   EnforcedStyleAlignWith: begin
 Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+
 Rails/ActionOrder:
   ExpectedOrder:
     - index
@@ -29,10 +37,6 @@ Rails/ActionOrder:
 Rails/LexicallyScopedActionFilter:
   Exclude:
     - app/controllers/application_controller.rb
+
 RSpec/MessageSpies:
   EnforcedStyle: receive
-Style/ClassAndModuleChildren:
-  EnforcedStyle: compact
-Style/Documentation:
-  Enabled: false
-# class module

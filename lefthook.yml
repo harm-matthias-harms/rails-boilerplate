@@ -18,10 +18,6 @@ pre-commit:
     i18n tasks:
       glob: "{app,config/locales}/**/*.{haml,rb,yml}"
       run: bundle exec i18n-tasks health
-    brakeman:
-      run: bundle exec brakeman
-    database_consistency:
-      run: bundle exec database_consistency
 pre-push:
   parallel: true
   scripts:
