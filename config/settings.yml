@@ -2,3 +2,8 @@ app:
   name: rails_boilerplate
   host: "https://rails-boilerplate.io"
 s3:
+  endpoint:
+  region:
+  bucket:
+  access_key_id:
+  secret_access_key:
