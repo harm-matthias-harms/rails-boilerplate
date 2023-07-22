@@ -1,3 +1,4 @@
 app:
   name: rails_boilerplate
   host: "https://rails-boilerplate.io"
+s3:

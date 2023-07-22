@@ -74,8 +74,8 @@ Config.setup do |config|
           required(:enable_starttls_auto).filled(:bool)
         end
       end
-      if Rails.env.production?
-        required(:s3).schema do
+      required(:s3).schema do
+        if Rails.env.production?
           required(:endpoint).filled(:string)
           required(:region).filled(:string)
           required(:bucket).filled(:string)
