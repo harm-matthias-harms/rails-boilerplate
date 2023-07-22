@@ -74,6 +74,15 @@ Config.setup do |config|
           required(:enable_starttls_auto).filled(:bool)
         end
       end
+      if Rails.env.production?
+        required(:s3).schema do
+          required(:endpoint).filled(:string)
+          required(:region).filled(:string)
+          required(:bucket).filled(:string)
+          required(:access_key_id).filled(:string)
+          required(:secret_access_key).filled(:string)
+        end
+      end
     end
   end
 

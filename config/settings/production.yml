@@ -5,3 +5,9 @@ database:
   password:
 redis:
   url:
+s3:
+  endpoint:
+  region:
+  bucket:
+  access_key_id:
+  secret_access_key:
