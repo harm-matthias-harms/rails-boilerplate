@@ -101,7 +101,7 @@ end
 gem 'active_storage_validations', '1.0.4'
 gem 'config', '4.2.1'
 gem 'haml-rails', '2.1.0'
-gem 'pundit', '2.3.0'
+gem 'pundit', '2.3.1'
 gem 'service_actor', '3.7.0'
 gem 'service_actor-rails', '1.0.0'
 gem 'sidekiq', '7.1.2'
