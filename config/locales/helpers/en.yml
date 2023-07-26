@@ -1,0 +1,10 @@
+---
+en:
+  helpers:
+    flash:
+      create:
+        success: ${model} created successfully.
+        error: ${model} not created.
+      update:
+        success: ${model} updated successfully.
+        error: ${model} not updated.
