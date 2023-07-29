@@ -3,8 +3,17 @@ en:
   helpers:
     flash:
       create:
-        success: ${model} created successfully.
-        error: ${model} not created.
+        error: "${model} not created."
+        success: "${model} created successfully."
       update:
-        success: ${model} updated successfully.
-        error: ${model} not updated.
+        error: "${model} not updated."
+        success: "${model} updated successfully."
+    meta:
+      description:
+        default: Rails boilerplate to faster bootstrap new projects.
+      keywords:
+        default: Ruby on Rails, Boilerplate
+      robots:
+        default: all
+      title:
+        default: Rails Boilerplate
