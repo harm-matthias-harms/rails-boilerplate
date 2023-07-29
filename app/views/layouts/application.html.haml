@@ -3,7 +3,10 @@
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type' }
     %title
-      = t('.title')
+      = content_for(:title) || page_title
+    %meta{ name: 'description', content: content_for(:description) || page_description }
+    %meta{ name: 'keywords', content: content_for(:keywords) || page_keywords }
+    %meta{ name: 'robots', content: content_for(:robots) || page_robots }
     %meta{ content: 'width=device-width,initial-scale=1', name: 'viewport' }
     = csrf_meta_tags
     = csp_meta_tag
