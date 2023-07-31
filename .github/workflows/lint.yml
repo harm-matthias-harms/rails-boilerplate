@@ -61,6 +61,26 @@ jobs:
       - run: bundle exec database_consistency
         env:
           RAILS_ENV: test
+  active_record_doctor:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15.1-alpine3.17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        ports:
+          - 5432:5432
+    env:
+      RAILS_ENV: test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '.tool-versions'
+          bundler-cache: true
+      - run: bin/rails db:prepare
+      - run: bundle exec rails active_record_doctor
   standardjs:
     runs-on: ubuntu-latest
     steps:
