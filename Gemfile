@@ -98,6 +98,7 @@ group :development do
   gem 'rubocop-rspec', '2.23.0', require: false
 end
 
+gem 'active_record_doctor', '1.12.0'
 gem 'active_storage_validations', '1.0.4'
 gem 'config', '4.2.1'
 gem 'haml-rails', '2.1.0'
