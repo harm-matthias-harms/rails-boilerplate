@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module ViewComponentsHelper
-  def render_component(klass, *args, **kwargs, &)
-    render(klass.new(*args, **kwargs), &)
+  def render_component(klass, *, **, &)
+    render(klass.new(*, **), &)
   end
 
-  def render_component_collection(klass, *args, **kwargs, &)
-    render(klass.with_collection(*args, **kwargs, &))
+  def render_component_collection(klass, *, **, &)
+    render(klass.with_collection(*, **, &))
   end
 end
