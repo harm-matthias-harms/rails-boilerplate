@@ -8,4 +8,6 @@ class ApplicationController < ActionController::Base
   after_action :verify_policy_scoped, only: :index
 
   protect_from_forgery with: :exception
+
+  default_form_builder TailwindFormBuilder
 end

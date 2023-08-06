@@ -1,0 +1,11 @@
+- dummy = FormPreview::Dummy.new(age: 99)
+- dummy.valid?
+= form_with model: dummy, url: '#', builder: TailwindFormBuilder do |form|
+  = form.labeled_text_field :name
+  = form.labeled_number_field :age
+  = form.labeled_email_field :email
+  = form.labeled_password_field :password
+  = form.labeled_phone_field :phone
+  = form.labeled_date_field :date
+  = form.labeled_datetime_field :datetime
+  = form.submit

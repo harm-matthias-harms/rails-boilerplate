@@ -6,7 +6,8 @@ module.exports = {
     './app/components/**/*.{html.haml,rb,js}',
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
+    './app/javascript/**/*.js',
+    './spec/components/previews/**/*.{html.haml,rb}'
   ],
   plugins: [require('daisyui')],
   theme: {
