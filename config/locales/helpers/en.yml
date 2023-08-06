@@ -8,6 +8,9 @@ en:
       update:
         error: "${model} not updated."
         success: "${model} updated successfully."
+    forms:
+      submit:
+        required: All fields marked with * are required.
     meta:
       description:
         default: Rails boilerplate to faster bootstrap new projects.
