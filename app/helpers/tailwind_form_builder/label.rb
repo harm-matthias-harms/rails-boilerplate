@@ -28,14 +28,6 @@ module TailwindFormBuilder::Label
     object.errors&.[](attribute)&.any?
   end
 
-  def required_class(attribute)
-    if required?(attribute)
-      "after:content-['*']"
-    else
-      ''
-    end
-  end
-
   def label_options(attribute, options = {})
     {
       enabled: true,
