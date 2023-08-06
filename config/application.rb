@@ -33,6 +33,7 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
 
     config.view_component.generate.preview = true
     config.view_component.preview_paths << Rails.root.join('spec/components/previews')
+    config.view_component.default_preview_layout = 'component_preview'
 
     config.action_mailer.default_url_options = { host: Settings.app.host }
     config.action_mailer.asset_host = Settings.app.host
