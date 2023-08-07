@@ -195,10 +195,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.44.0.tgz#961a5903c74139390478bdc808bcde3fc45ab7af"
   integrity sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==
 
-"@fontsource/nunito@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.5.tgz#309138029f332da669ed25019f4612627d0384d7"
-  integrity sha512-y98oMry6UQM1L0kffWeRTTWu9PVBoFcX44l3vkHynSfk0BRHxxCDnm+uDPYYiIud7Qnwd3cZubw0Z4JwazXOWw==
+"@fontsource/nunito@5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.8.tgz#66011e636be1e1efcff9201fc96cac586bac571d"
+  integrity sha512-Sb5uROR+aiS6T0CshbDAkjHmLXyWkWXCkDnx4K8fbRFPfmLpw6vKCu4iwb0+RuJDX519o98H/Qouk6p1umkFEQ==
 
 "@hotwired/stimulus@3.2.1":
   version "3.2.1"
