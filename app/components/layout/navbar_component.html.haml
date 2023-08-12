@@ -1,0 +1,6 @@
+.bg-base-100.sticky.top-0.z-50.bg-opacity-90.backdrop-blur.shadow-sm
+  = render_component(Common::ContainerComponent, margin: 'my-0') do
+    %nav.navbar
+      .navbar-start
+        = link_to Settings.app.name, root_path, class: 'btn btn-ghost'
+      .navbar-end

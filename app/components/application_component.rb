@@ -8,6 +8,8 @@ class ApplicationComponent < ViewComponent::Base
 
   include ViewComponentsHelper
 
+  attr_reader :classes
+
   def initialize(**kwargs)
     super
     kwargs.each { |name, value| instance_variable_set("@#{name}", value) }
