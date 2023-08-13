@@ -1,0 +1,6 @@
+.alert.shadow-lg{ class: type, data: { controller: 'remove', 'remove-timeout-value': timeout } }
+  %i.fas{ class: icon }
+  %span
+    = message
+  %button.shrink.btn.btn-sm.btn-ghost.ml-2{ data: { action: 'click->remove#removeElement' } }
+    %i.fas.fa-times
