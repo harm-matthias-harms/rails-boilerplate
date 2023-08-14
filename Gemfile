@@ -93,7 +93,7 @@ group :development do
   gem 'rubocop-factory_bot', '2.23.1', require: false
   gem 'rubocop-performance', '1.19.0', require: false
   gem 'rubocop-rails', '2.20.2', require: false
-  gem 'rubocop-rspec', '2.23.0', require: false
+  gem 'rubocop-rspec', '2.23.2', require: false
 end
 
 gem 'active_record_doctor', '1.12.0'
