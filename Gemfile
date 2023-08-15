@@ -67,6 +67,21 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'listen', '3.8.0'
+  gem 'lookbook', '2.0.5'
+
+  gem 'annotate', '3.2.0', require: false
+  gem 'brakeman', '6.0.1', require: false
+  gem 'database_consistency', '1.7.18', require: false
+  gem 'haml_lint', '0.49.3', require: false
+  gem 'i18n-tasks', '1.0.12', require: false
+  gem 'rubocop', '1.56.0', require: false
+  gem 'rubocop-capybara', '2.18.0', require: false
+  gem 'rubocop-factory_bot', '2.23.1', require: false
+  gem 'rubocop-performance', '1.19.0', require: false
+  gem 'rubocop-rails', '2.20.2', require: false
+  gem 'rubocop-rspec', '2.23.2', require: false
 end
 
 group :test do
@@ -77,23 +92,6 @@ group :test do
   gem 'selenium-webdriver', '4.11.0'
   gem 'shoulda-matchers', '5.3.0', require: false
   gem 'simplecov', '0.22.0', require: false
-end
-
-group :development do
-  gem 'listen', '3.8.0'
-  gem 'lookbook', '2.0.5'
-
-  gem 'annotate', '3.2.0', require: false
-  gem 'brakeman', '6.0.1', require: false
-  gem 'database_consistency', '1.7.18', require: false
-  gem 'haml_lint', '0.49.3', require: false
-  gem 'i18n-tasks', '1.0.12', require: false
-  gem 'rubocop', '1.55.1', require: false
-  gem 'rubocop-capybara', '2.18.0', require: false
-  gem 'rubocop-factory_bot', '2.23.1', require: false
-  gem 'rubocop-performance', '1.19.0', require: false
-  gem 'rubocop-rails', '2.20.2', require: false
-  gem 'rubocop-rspec', '2.23.2', require: false
 end
 
 gem 'active_record_doctor', '1.12.0'
