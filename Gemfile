@@ -67,19 +67,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara', '3.39.2'
-  gem 'database_cleaner-active_record', '2.1.0'
-  gem 'fuubar', '2.5.1', require: false
-  gem 'selenium-webdriver', '4.11.0'
-  gem 'shoulda-matchers', '5.3.0', require: false
-  gem 'simplecov', '0.22.0', require: false
-end
-
-group :development do
   gem 'listen', '3.8.0'
   gem 'lookbook', '2.0.5'
 
@@ -94,6 +82,16 @@ group :development do
   gem 'rubocop-performance', '1.19.0', require: false
   gem 'rubocop-rails', '2.20.2', require: false
   gem 'rubocop-rspec', '2.23.2', require: false
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara', '3.39.2'
+  gem 'database_cleaner-active_record', '2.1.0'
+  gem 'fuubar', '2.5.1', require: false
+  gem 'selenium-webdriver', '4.11.0'
+  gem 'shoulda-matchers', '5.3.0', require: false
+  gem 'simplecov', '0.22.0', require: false
 end
 
 gem 'active_record_doctor', '1.12.0'
