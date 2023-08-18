@@ -3,6 +3,11 @@
 require 'simplecov'
 require 'pundit/rspec'
 
+if ENV.include? 'CODECOV_TOKEN'
+  require 'simplecov-cobertura'
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+end
+
 unless SimpleCov.running
   SimpleCov.start 'rails' do
     add_group 'Actors', 'app/actors'
