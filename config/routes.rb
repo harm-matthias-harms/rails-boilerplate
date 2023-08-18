@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  if Rails.env.development?
-    mount Lookbook::Engine, at: '/lookbook'
+  mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
+
+  # only user with roles admin should be able to access sidekiq
+  authenticate :user, ->(user) { user.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end
 end

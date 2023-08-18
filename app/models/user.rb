@@ -11,6 +11,8 @@ class User < ApplicationRecord
   validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
   validates :email, :encrypted_password, :sign_in_count, presence: true
 
+  enum role: { user: 0, admin: 1 }, _default: :user
+
   private
 
   def send_devise_notification(notification, *)
@@ -39,6 +41,7 @@ end
 # **`remember_created_at`**     | `datetime`         |
 # **`reset_password_sent_at`**  | `datetime`         |
 # **`reset_password_token`**    | `string`           |
+# **`role`**                    | `integer`          | `default("user")`
 # **`sign_in_count`**           | `integer`          | `default(0), not null`
 # **`unconfirmed_email`**       | `string`           |
 # **`created_at`**              | `datetime`         | `not null`
