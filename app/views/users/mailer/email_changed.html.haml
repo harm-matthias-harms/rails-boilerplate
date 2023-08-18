@@ -1,0 +1,8 @@
+= render_component(Mailer::TextComponent) do
+  Hello #{@resource.email}!
+- if @resource.try(:unconfirmed_email?)
+  = render_component(Mailer::TextComponent) do
+    We're contacting you to notify you that your email is being changed to #{@resource.unconfirmed_email}.
+- else
+  = render_component(Mailer::TextComponent) do
+    We're contacting you to notify you that your email has been changed to #{@resource.email}.
