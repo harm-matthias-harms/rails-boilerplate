@@ -1,0 +1,6 @@
+%h2 Resend confirmation instructions
+
+= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+  = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
+  = f.submit 'Send instructions'
+= render 'users/shared/links'

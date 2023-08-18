@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   include Pundit::Authorization
 
   before_action :set_current_user, if: :user_signed_in?
-  after_action :verify_authorized, except: :index
-  after_action :verify_policy_scoped, only: :index
+  after_action :verify_authorized, except: :index, unless: :devise_controller?
+  after_action :verify_policy_scoped, only: :index, unless: :devise_controller?
 
   protect_from_forgery with: :exception
 

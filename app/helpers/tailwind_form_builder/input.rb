@@ -4,40 +4,19 @@ module TailwindFormBuilder::Input
   include TailwindFormBuilder::Base
   include TailwindFormBuilder::Label
 
-  def labeled_text_field(attribute)
-    labeled_input(:text_field, attribute)
-  end
-
-  def labeled_number_field(attribute)
-    labeled_input(:number_field, attribute)
-  end
-
-  def labeled_email_field(attribute)
-    labeled_input(:email_field, attribute)
-  end
-
-  def labeled_password_field(attribute)
-    labeled_input(:password_field, attribute)
-  end
-
-  def labeled_phone_field(attribute)
-    labeled_input(:phone_field, attribute)
-  end
-
-  def labeled_date_field(attribute)
-    labeled_input(:date_field, attribute)
-  end
-
-  def labeled_datetime_field(attribute)
-    labeled_input(:datetime_field, attribute)
-  end
+  %i[text_field number_field email_field password_field phone_field date_field
+     datetime_field].each do |method|
+       define_method("labeled_#{method}") do |attribute, options = {}|
+         labeled_input(method, attribute, options)
+       end
+     end
 
   private
 
-  def labeled_input(method, attribute)
+  def labeled_input(method, attribute, options = {})
     form_control do
       label(attribute) +
-        input(method, attribute) +
+        input(method, attribute, options) +
         errors(attribute)
     end
   end

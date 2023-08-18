@@ -16,7 +16,7 @@
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true
   %body.flex.flex-col.min-h-screen.bg-base-100
     = render_component(Layout::NavbarComponent)
-    .relative
+    .relative.grow
       .absolute.toast.toast-end.toast-top#flash
         - flash.each do |type, message|
           = render_component(Layout::NotificationComponent, type:, message:)
