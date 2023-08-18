@@ -10,6 +10,12 @@ class User < ApplicationRecord
 
   validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
   validates :email, :encrypted_password, :sign_in_count, presence: true
+
+  private
+
+  def send_devise_notification(notification, *)
+    devise_mailer.send(notification, self, *).deliver_later
+  end
 end
 
 # ## Schema Information
