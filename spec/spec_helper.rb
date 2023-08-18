@@ -3,7 +3,7 @@
 require 'simplecov'
 require 'pundit/rspec'
 
-if ENV.include? 'CODECOV_TOKEN'
+if ENV.include? 'CI'
   require 'simplecov-cobertura'
   SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
 end
