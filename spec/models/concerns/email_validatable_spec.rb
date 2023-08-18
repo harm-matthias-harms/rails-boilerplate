@@ -3,7 +3,7 @@
 class Dummy
   include ActiveModel::Model
   include ActiveModel::Attributes
-  include Truemailable
+  include EmailValidatable
 
   attribute :email
 end
