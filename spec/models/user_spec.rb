@@ -1,7 +1,23 @@
 # frozen_string_literal: true
 
 RSpec.describe User do
+  subject(:user) { build(:user) }
+
   it { expect(described_class.ancestors).to include EmailValidatable }
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_presence_of(:encrypted_password) }
+    it { is_expected.to validate_presence_of(:sign_in_count) }
+    it { is_expected.to validate_uniqueness_of(:confirmation_token).allow_nil }
+    it { is_expected.to validate_uniqueness_of(:reset_password_token).allow_nil }
+  end
+
+  describe '.to_s' do
+    it 'returns email' do
+      expect(user.to_s).to eq user.email
+    end
+  end
 end
 
 # ## Schema Information

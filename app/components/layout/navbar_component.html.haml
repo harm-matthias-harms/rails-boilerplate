@@ -1,6 +1,6 @@
 %nav.navbar.bg-base-100.sticky.top-0.z-50.bg-opacity-90.backdrop-blur.shadow-sm
   .navbar-start
-    = link_to Settings.app.name, root_path, class: 'btn btn-ghost'
+    = link_to Settings.app.name.humanize, root_path, class: 'btn btn-ghost'
   .navbar-end
     - if Current.user.present?
       = link_to t('users.sessions.destroy.heading'),

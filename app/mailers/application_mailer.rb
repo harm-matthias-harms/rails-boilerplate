@@ -5,5 +5,12 @@ class ApplicationMailer < ActionMailer::Base
 
   layout 'mailer'
 
-  default from: Settings.mail.sender
+  default from: Settings.mail.sender, reply_to: Settings.mail.support
+
+  private
+
+  def process_action(*args)
+    Current.user = args.detect { |arg| arg.is_a? User }
+    super
+  end
 end

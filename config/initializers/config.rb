@@ -65,6 +65,7 @@ Config.setup do |config|
       end
       required(:mail).schema do
         required(:sender).filled(:string)
+        required(:support).filled(:string)
         unless Rails.env.test?
           required(:address).filled(:string)
           required(:port).filled(:integer)

@@ -97,7 +97,10 @@
                   <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;margin:0px;">
                     <tbody>
                     <%= render_component(Mailer::TextComponent, color: :gray, text_align: 'center', padding_bottom: '40px') { Settings.app.name.humanize } %>
+                    <%= render_component(Mailer::TextComponent) { t('.greeting', user: Current.user) } %>
                     <%= yield %>
+                    <%= render_component(Mailer::TextComponent) { t('.regards') } %>
+                    <%= render_component(Mailer::TextComponent) { Settings.app.name.humanize } %>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:20px;word-break:break-word;">
                         <p style="border-top:solid 1px #394E6A;font-size:1px;margin:0px auto;width:100%;">

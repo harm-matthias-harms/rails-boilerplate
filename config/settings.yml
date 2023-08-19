@@ -1,6 +1,8 @@
 app:
   name: rails_boilerplate
   host: "https://rails-boilerplate.io"
+mail:
+  support: support@rails-boilerplate.io
 s3:
   endpoint:
   region:

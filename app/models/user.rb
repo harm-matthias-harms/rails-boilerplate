@@ -13,6 +13,10 @@ class User < ApplicationRecord
 
   enum role: { user: 0, admin: 1 }, _default: :user
 
+  def to_s
+    email
+  end
+
   private
 
   def send_devise_notification(notification, *)

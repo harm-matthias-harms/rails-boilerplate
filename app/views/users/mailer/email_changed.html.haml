@@ -1,8 +1,10 @@
-= render_component(Mailer::TextComponent) do
-  Hello #{@resource.email}!
 - if @resource.try(:unconfirmed_email?)
   = render_component(Mailer::TextComponent) do
-    We're contacting you to notify you that your email is being changed to #{@resource.unconfirmed_email}.
+    We're writing to inform you that your email address is being changed to #{@resource.unconfirmed_email}.
 - else
   = render_component(Mailer::TextComponent) do
-    We're contacting you to notify you that your email has been changed to #{@resource.email}.
+    We're writing to inform you that your email address has been changed to #{@resource.email}.
+= render_component(Mailer::TextComponent) do
+  If you made this change, you're all set.
+= render_component(Mailer::TextComponent) do
+  If this wasn't you, please contact us immediately at #{Settings.mail.support} so we can secure your account.

@@ -1,6 +1,8 @@
 = render_component(Mailer::TextComponent) do
-  Hello #{@resource.email}!
+  Welcome to #{Settings.app.name.humanize}!
 = render_component(Mailer::TextComponent) do
-  You can confirm your account email through the link below:
+  To complete your registration and unlock all our features, please click the link below to confirm your email:
 = render_component(Mailer::ButtonComponent, href: confirmation_url(@resource, confirmation_token: @token)) do
   Confirm my account
+= render_component(Mailer::TextComponent) do
+  Thank you for choosing #{Settings.app.name.humanize}!
