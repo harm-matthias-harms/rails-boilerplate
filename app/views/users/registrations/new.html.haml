@@ -1,8 +1,10 @@
-%h2 Sign up
+%h2
+  = t('.heading')
 
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
   = f.labeled_password_field :password, autocomplete: 'new-password'
   = f.labeled_password_field :password_confirmation, autocomplete: 'new-password'
-  = f.submit 'Sign up'
+  = f.submit t('.submit')
+
 = render 'users/shared/links'

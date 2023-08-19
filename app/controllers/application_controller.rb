@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except: :index, unless: :devise_controller?
   after_action :verify_policy_scoped, only: :index, unless: :devise_controller?
 
-  protect_from_forgery with: :exception
+  protect_from_forgery prepend: true, with: :exception
 
   default_form_builder TailwindFormBuilder
 

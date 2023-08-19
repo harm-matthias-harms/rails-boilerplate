@@ -62,3 +62,35 @@ en:
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  users:
+    confirmations:
+      new:
+        heading: Resend confirmation instructions
+        submit: Send instructions
+    passwords:
+      edit:
+        heading: Change your password
+        submit: Change my password
+      new:
+        heading: Forgot your password?
+        submit: Send instructions
+    registrations:
+      edit:
+        cancel_account:
+          action: Cancel my account
+          confirm: Are you sure?
+          heading: Cancel account
+        changed_email: 'Currently waiting confirmation for: ${resource.unconfirmed_email}'
+        current_password_hint: "(we need your current password to confirm your changes)"
+        heading: Edit account
+        password_hint: "(leave blank if you don't want to change it)"
+        submit: Update
+      new:
+        heading: Sign up
+        submit: Sign up
+    sessions:
+      destroy:
+        heading: Sign out
+      new:
+        heading: Log in
+        submit: Log in
