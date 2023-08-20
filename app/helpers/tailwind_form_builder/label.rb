@@ -8,18 +8,20 @@ module TailwindFormBuilder::Label
 
   def label(attribute, text = nil, options = {}, &)
     super(attribute, text, label_options(attribute, options)) do |builder|
-      template.tag.span(class: ['label-text font-bold', required?(attribute) && "after:content-['*']"]) do
-        block_given? ? template.capture(builder, &) : text || builder.translation
+      label = template.tag.span(class: ['label-text font-bold', required?(attribute) && "after:content-['*']"]) do
+        text || builder.translation
       end
+
+      safe_join([block_given? && template.capture(builder, &), label].select(&:itself))
     end
   end
 
   def errors(attribute)
+    return unless errors?(attribute)
+
     template.label(object_name, attribute, nil, objectify_options({ class: 'label text-xs' })) do
       template.tag.span(class: 'label-text text-error') do
-        safe_join(object.errors[attribute].map do |msg|
-          template.tag.p { msg }
-        end)
+        safe_join(object.errors[attribute].map { |msg| template.tag.p { msg } })
       end
     end
   end
@@ -32,7 +34,7 @@ module TailwindFormBuilder::Label
     {
       enabled: true,
       required: required?(attribute),
-      class: 'label'
-    }.merge(options.delete(:label) || {}).compact
+      class: ['label', options.delete(:class)]
+    }
   end
 end

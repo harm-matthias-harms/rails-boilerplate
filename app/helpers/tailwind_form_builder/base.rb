@@ -4,7 +4,7 @@ module TailwindFormBuilder::Base
   private
 
   def form_control(&)
-    template.tag.div(class: 'form-control w-full max-w-xs', &)
+    template.tag.div(class: 'form-control w-full max-w-xs mb-2', &)
   end
 
   def required?(attribute)

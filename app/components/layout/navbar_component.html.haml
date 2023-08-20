@@ -3,10 +3,7 @@
     = link_to Settings.app.name.humanize, root_path, class: 'btn btn-ghost'
   .navbar-end
     - if Current.user.present?
-      = link_to t('.sign_out'),
-                destroy_user_session_path,
-                data: { turbo_method: :delete },
-                class: 'btn btn-ghost'
+      = link_to t('.sign_out'), destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-ghost'
     - else
       = link_to t('.sign_in'), new_user_session_path, class: 'btn btn-ghost'
       = link_to t('.sign_up'), new_user_registration_path, class: 'btn btn-primary'
