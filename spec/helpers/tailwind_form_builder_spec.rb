@@ -4,6 +4,8 @@ class Dummy
   include ActiveModel::Model
   include ActiveModel::Attributes
   attribute :name
+
+  validates :name, presence: true
 end
 
 RSpec.describe TailwindFormBuilder do
@@ -28,6 +30,12 @@ RSpec.describe TailwindFormBuilder do
          it 'contains input' do
            expect(field).to match(/<input.*class="input input-bordered.*".*name="object\[name\].*id="object_name"/)
          end
+
+         it 'contains errors' do
+           object.valid?
+
+           expect(field).to match(/<label.*>.*<input.*><span class="label-text text-error".*><p>can&#39;t be blank.*/)
+         end
        end
      end
 
@@ -46,6 +54,12 @@ RSpec.describe TailwindFormBuilder do
       regex = %r{<label.*>.*<input.*class="checkbox checkbox-primary.*".*name="object\[name\].*>.*<span.* class="label-text.*>Name</span></label>} # rubocop:disable Layout/LineLength
 
       expect(field).to match(regex)
+    end
+
+    it 'contains errors' do
+      object.valid?
+
+      expect(field).to match(/<label.*>.*<input.*><span class="label-text text-error".*><p>can&#39;t be blank.*/)
     end
   end
 
