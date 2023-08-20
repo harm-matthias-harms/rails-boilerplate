@@ -118,3 +118,9 @@ en:
       new:
         heading: Log in
         submit: Log in
+    shared:
+      links:
+        forgot_password: Forgot your password?
+        resend_confirmation: Resend confirmation instructions
+        sign_in: Log in
+        sign_up: Sign up
