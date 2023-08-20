@@ -1,10 +1,7 @@
 - if @resource.try(:unconfirmed_email?)
   = render_component(Mailer::TextComponent) do
-    We're writing to inform you that your email address is being changed to #{@resource.unconfirmed_email}.
+    = t('.instructions.1.unconfirmed_email', email: @resource.unconfirmed_email)
 - else
-  = render_component(Mailer::TextComponent) do
-    We're writing to inform you that your email address has been changed to #{@resource.email}.
-= render_component(Mailer::TextComponent) do
-  If you made this change, you're all set.
-= render_component(Mailer::TextComponent) do
-  If this wasn't you, please contact us immediately at #{Settings.mail.support} so we can secure your account.
+  = render_component(Mailer::TextComponent) { t('.instructions.1.confirmed_email', email: @resource.email) }
+= render_component(Mailer::TextComponent) { t('.instructions.2') }
+= render_component(Mailer::TextComponent) { t('.instructions.3', email: Settings.mail.support) }
