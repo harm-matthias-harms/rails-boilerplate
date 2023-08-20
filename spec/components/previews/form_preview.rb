@@ -12,6 +12,7 @@ class FormPreview < ViewComponent::Preview
     attribute :phone, :string
     attribute :date, :date
     attribute :datetime, :datetime
+    attribute :remember_me, :boolean
 
     validates :name, presence: true
   end

@@ -20,6 +20,12 @@ Layout/BeginEndAlignment:
   EnforcedStyleAlignWith: begin
 Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*.rb
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
 Style/Documentation:

@@ -1,0 +1,7 @@
+- if @resource.try(:unconfirmed_email?)
+  = render_component(Mailer::TextComponent) do
+    = t('.instructions.1.unconfirmed_email', email: @resource.unconfirmed_email)
+- else
+  = render_component(Mailer::TextComponent) { t('.instructions.1.confirmed_email', email: @resource.email) }
+= render_component(Mailer::TextComponent) { t('.instructions.2') }
+= render_component(Mailer::TextComponent) { t('.instructions.3', email: Settings.mail.support) }

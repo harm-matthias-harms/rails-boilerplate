@@ -37,5 +37,8 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
 
     config.action_mailer.default_url_options = { host: Settings.app.host }
     config.action_mailer.asset_host = Settings.app.host
+
+    config.i18n.available_locales = %i[en]
+    config.i18n.default_locale = :en
   end
 end

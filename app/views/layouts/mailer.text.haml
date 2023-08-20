@@ -1,5 +1,9 @@
+= t('.greeting', user: Current.user)
+\
 = yield
-
+= t('.regards')
+\
+= Settings.app.name.humanize
 \---
-© 2023-#{Date.current.year} #{Settings.app.name}. All rights reserved.
+© 2023-#{Date.current.year} #{Settings.app.name.humanize}. All rights reserved.
 = root_url

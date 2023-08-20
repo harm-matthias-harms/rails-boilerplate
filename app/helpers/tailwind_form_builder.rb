@@ -2,6 +2,7 @@
 
 class TailwindFormBuilder < ActionView::Helpers::FormBuilder
   include Input
+  include Checkbox
   include Submit
 
   attr_reader :template

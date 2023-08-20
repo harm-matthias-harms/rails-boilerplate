@@ -1,0 +1,6 @@
+---
+en:
+  layouts:
+    mailer:
+      greeting: Dear %{user},
+      regards: Best regards,

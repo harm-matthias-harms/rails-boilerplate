@@ -88,6 +88,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara', '3.39.2'
   gem 'database_cleaner-active_record', '2.1.0'
+  gem 'faker', '3.2.1'
   gem 'fuubar', '2.5.1', require: false
   gem 'selenium-webdriver', '4.11.0'
   gem 'shoulda-matchers', '5.3.0', require: false
@@ -98,9 +99,11 @@ end
 gem 'active_record_doctor', '1.12.0'
 gem 'active_storage_validations', '1.0.4'
 gem 'config', '4.2.1'
+gem 'devise', '4.9.2'
 gem 'haml-rails', '2.1.0'
 gem 'pundit', '2.3.1'
 gem 'service_actor', '3.7.0'
 gem 'service_actor-rails', '1.0.0'
 gem 'sidekiq', '7.1.2'
+gem 'truemail', '3.0.9'
 gem 'view_component', '3.5.0'

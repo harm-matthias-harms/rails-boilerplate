@@ -1,0 +1,28 @@
+%h2
+  = t('.heading')
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    %div
+      = t('.changed_email', new_email: resource.unconfirmed_email)
+
+  = f.labeled_password_field :password, autocomplete: 'new-password'
+  %i
+    = t('.password_hint')
+
+  = f.labeled_password_field :password_confirmation, autocomplete: 'new-password'
+
+  = f.labeled_password_field :current_password, autocomplete: 'current-password'
+  %i
+    = t('.current_password_hint')
+
+  = f.submit t('.submit')
+
+%h3
+  = t('.cancel_account.heading')
+= button_to t('.cancel_account.action'),
+            registration_path(resource_name),
+            class: 'btn btn-warning',
+            data: { turbo_confirm: t('.cancel_account.confirm') },
+            method: :delete
