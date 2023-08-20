@@ -113,8 +113,6 @@ en:
         heading: Sign up
         submit: Sign up
     sessions:
-      destroy:
-        heading: Sign out
       new:
         heading: Log in
         submit: Log in
