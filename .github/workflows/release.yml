@@ -23,3 +23,5 @@ jobs:
     needs:
       - lint
       - test
+    secrets:
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}

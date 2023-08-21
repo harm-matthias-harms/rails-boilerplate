@@ -43,7 +43,8 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SETTINGS_SKIP_VALIDATION=true ./bin/rails assets:precompile
+RUN --mount=type=secret,id=RAILS_MASTER_KEY \
+    RAILS_MASTER_KEY=$(cat /run/secrets/RAILS_MASTER_KEY) SETTINGS_SKIP_VALIDATION=true ./bin/rails assets:precompile
 
 
 # Final stage for app image
