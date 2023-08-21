@@ -4,7 +4,6 @@ FROM ruby:3.2.2-slim as base
 WORKDIR /rails
 
 # Set production environment
-ARG RAILS_MASTER_KEY
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \

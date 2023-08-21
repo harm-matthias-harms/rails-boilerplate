@@ -2,9 +2,6 @@ name: Build
 
 on:
   workflow_call:
-    secrets:
-      RAILS_MASTER_KEY:
-        required: true
 
 jobs:
   build:
@@ -28,5 +25,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          secrets: |
-            RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
