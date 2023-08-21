@@ -1,5 +1,4 @@
-ARG RUBY_VERSION
-FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
+FROM ruby:3.2.2-slim as base
 
 # Rails app lives here
 WORKDIR /rails
@@ -23,7 +22,7 @@ RUN apt-get update -qq && \
 ARG NODE_VERSION
 ENV PATH=/usr/local/node/bin:$PATH
 RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
-    /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
+    /tmp/node-build-master/bin/node-build "18.17.1" /usr/local/node && \
     npm install -g yarn && \
     rm -rf /tmp/node-build-master
 
