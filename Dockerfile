@@ -1,11 +1,9 @@
-ARG RUBY_VERSION
-FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
+FROM ruby:3.2.2-slim as base
 
 # Rails app lives here
 WORKDIR /rails
 
 # Set production environment
-ARG RAILS_MASTER_KEY
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
@@ -23,7 +21,7 @@ RUN apt-get update -qq && \
 ARG NODE_VERSION
 ENV PATH=/usr/local/node/bin:$PATH
 RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
-    /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
+    /tmp/node-build-master/bin/node-build "18.17.1" /usr/local/node && \
     npm install -g yarn && \
     rm -rf /tmp/node-build-master
 
@@ -45,7 +43,8 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SETTINGS_SKIP_VALIDATION=true ./bin/rails assets:precompile
+RUN --mount=type=secret,id=RAILS_MASTER_KEY \
+    RAILS_MASTER_KEY=$(cat /run/secrets/RAILS_MASTER_KEY) SETTINGS_SKIP_VALIDATION=true ./bin/rails assets:precompile
 
 
 # Final stage for app image
