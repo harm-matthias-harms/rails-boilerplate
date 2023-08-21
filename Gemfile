@@ -24,7 +24,7 @@ gem 'jsbundling-rails', '1.1.2'
 gem 'turbo-rails', '1.4.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails', '1.2.1'
+gem 'stimulus-rails', '1.2.2'
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails', '1.2.0'
