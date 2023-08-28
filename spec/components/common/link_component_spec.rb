@@ -3,7 +3,7 @@
 RSpec.describe Common::LinkComponent, type: :component do
   subject(:link) { described_class.new(type: :link, href: '#') }
 
-  let(:button) { described_class.new(type: :button, href: '#', classes: 'btn-primary') }
+  let(:button) { described_class.new(type: :button, href: '#', classes: 'btn-primary', data: { turbo: false }) }
 
   it 'renders a link' do
     render_inline(link) { 'Link' }
@@ -14,7 +14,7 @@ RSpec.describe Common::LinkComponent, type: :component do
   it 'renders additional classes' do
     render_inline(button) { 'Button' }
 
-    expect(page).to have_selector('a.btn.btn-primary')
+    expect(page).to have_selector('a.btn.btn-primary[data-turbo="false"]', text: 'Button')
   end
 
   describe '.type_classes' do
