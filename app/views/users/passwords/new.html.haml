@@ -1,4 +1,4 @@
-%h2
+= render_component(Common::HeadingComponent, tag: :h2) do
   = t('.heading')
 
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
