@@ -20,7 +20,7 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.active_job.queue_adapter = :sidekiq
+    config.active_job.queue_adapter = :good_job
 
     config.generators do |generate|
       generate.orm :active_record, primary_key_type: :uuid

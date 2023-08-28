@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'sidekiq/web'
-
 Rails.application.routes.draw do
   root 'home#index'
 
@@ -9,8 +7,7 @@ Rails.application.routes.draw do
 
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 
-  # only user with roles admin should be able to access sidekiq
   authenticate :user, ->(user) { user.admin? } do
-    mount Sidekiq::Web => '/sidekiq'
+    mount GoodJob::Engine => 'good_job'
   end
 end
