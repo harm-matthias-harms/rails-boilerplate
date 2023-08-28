@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Common::LinkComponent < ApplicationComponent
-  attr_reader :type, :href
+  attr_reader :type, :href, :data
 
   def type_classes
     {
