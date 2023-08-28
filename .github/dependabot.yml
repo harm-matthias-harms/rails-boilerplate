@@ -7,25 +7,37 @@ version: 2
 updates:
   - package-ecosystem: bundler
     directory: "/"
+    open-pull-requests-limit: 100
     schedule:
-      interval: weekly
+      day: "saturday"
+      time: "08:00"
+      timezone: "Europe/Berlin"
     allow:
       - dependency-type: direct
   - package-ecosystem: npm
     directory: "/"
+    open-pull-requests-limit: 100
     schedule:
-      interval: weekly
+      day: "saturday"
+      time: "08:00"
+      timezone: "Europe/Berlin"
     allow:
       - dependency-type: direct
   - package-ecosystem: docker
     directory: "/"
+    open-pull-requests-limit: 100
     schedule:
-      interval: weekly
+      day: "saturday"
+      time: "08:00"
+      timezone: "Europe/Berlin"
     allow:
       - dependency-type: direct
   - package-ecosystem: github-actions
     directory: /
+    open-pull-requests-limit: 100
     schedule:
-      interval: weekly
+      day: "saturday"
+      time: "08:00"
+      timezone: "Europe/Berlin"
     allow:
       - dependency-type: direct
