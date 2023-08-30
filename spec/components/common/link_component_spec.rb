@@ -50,7 +50,8 @@ RSpec.describe Common::LinkComponent, type: :component do
       nil => nil,
       true => nil,
       primary: 'btn-primary',
-      ghost: 'btn-ghost'
+      ghost: 'btn-ghost',
+      random: nil
     }.each do |button, classes|
       it "returns #{classes} for button #{button}" do
         expect(described_class.new(button:, href: '#').button_class).to eq(classes)
