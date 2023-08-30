@@ -1,20 +1,14 @@
 %nav.navbar.bg-base-100.sticky.top-0.z-50.bg-opacity-90.backdrop-blur.shadow-sm
   .navbar-start
-    = render_component(Common::LinkComponent, type: :button, href: root_path, classes: 'btn-ghost') do
+    = render_component(Common::LinkComponent, button: :ghost, href: root_path) do
       = Settings.app.name.humanize
   .navbar-end
     - if Current.user.present?
-      = render_component(Common::LinkComponent,
-                         type: :button,
-                         href: destroy_user_session_path,
-                         data: { turbo_method: :delete },
-                         classes: 'btn-ghost') do
+      = render_component(Common::LinkComponent, button: :ghost, href: destroy_user_session_path,
+                                                data: { turbo_method: :delete }) do
         = t('.sign_out')
     - else
-      = render_component(Common::LinkComponent, type: :button, href: new_user_session_path, classes: 'btn-ghost') do
+      = render_component(Common::LinkComponent, button: :ghost, href: new_user_session_path) do
         = t('.sign_in')
-      = render_component(Common::LinkComponent,
-                         type: :button,
-                         href: new_user_registration_path,
-                         classes: 'btn-primary') do
+      = render_component(Common::LinkComponent, button: :primary, href: new_user_registration_path) do
         = t('.sign_up')

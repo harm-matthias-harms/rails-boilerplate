@@ -1,14 +1,22 @@
 # frozen_string_literal: true
 
 class Common::LinkComponentPreview < ViewComponent::Preview
-  # !startgroup type
+  # @!group type
   def link
-    render(Common::LinkComponent.new(type: :link, href: '#')) { 'Link' }
+    render(Common::LinkComponent.new(link: true, href: '#')) { 'Link' }
   end
 
   def button
-    render(Common::LinkComponent.new(type: :button, href: '#')) { 'Button' }
+    render(Common::LinkComponent.new(button: true, href: '#')) { 'Button' }
   end
 
-  # !endgroup
+  def button_primary
+    render(Common::LinkComponent.new(button: :primary, href: '#')) { 'Button' }
+  end
+
+  def button_ghost
+    render(Common::LinkComponent.new(button: :ghost, href: '#')) { 'Button' }
+  end
+
+  # @!endgroup
 end
