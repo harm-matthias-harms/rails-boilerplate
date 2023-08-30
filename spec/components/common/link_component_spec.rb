@@ -5,6 +5,7 @@ RSpec.describe Common::LinkComponent, type: :component do
 
   let(:button) { described_class.new(button: true, href: '#') }
   let(:link_with_data) { described_class.new(link: true, href: '#', data: { test: 'test' }) }
+  let(:link_without_href) { described_class.new(link: true) }
 
   it 'renders a link' do
     render_inline(link) { 'Link' }
@@ -22,6 +23,12 @@ RSpec.describe Common::LinkComponent, type: :component do
     render_inline(link_with_data) { 'Link' }
 
     expect(page).to have_selector('a[data-test="test"]')
+  end
+
+  it 'renders link without href' do
+    render_inline(link_without_href) { 'Link' }
+
+    expect(page).to have_link('Link', href: 'javascript:;')
   end
 
   describe '.type' do
