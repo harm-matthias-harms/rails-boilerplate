@@ -1,0 +1,6 @@
+.dropdown{ class: [direction_class, align_class] }
+  = label
+  .dropdown-content.menu.z-1.p-2.shadow.bg-base-100.rounded-box.w-52.mt-4
+    - entries.each do |entry|
+      %li
+        = entry
