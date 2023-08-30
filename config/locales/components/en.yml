@@ -4,6 +4,7 @@ en:
     footer_component:
       copyright: Copyright © 2023 - All right reserved
     navbar_component:
+      settings: Settings
       sign_in: Log in
       sign_out: Sign out
       sign_up: Sign up

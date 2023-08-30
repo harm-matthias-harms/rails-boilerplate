@@ -4,9 +4,13 @@
       = Settings.app.name.humanize
   .navbar-end
     - if Current.user.present?
-      = render_component(Common::LinkComponent, button: :ghost, href: destroy_user_session_path,
-                                                data: { turbo_method: :delete }) do
-        = t('.sign_out')
+      = render_component(Common::DropdownComponent, align: :end) do |dropdown|
+        = dropdown.with_label(button: :ghost) do
+          %i.fas.fa-user
+        = dropdown.with_entry(href: edit_user_registration_path) do
+          = t('.settings')
+        = dropdown.with_entry(href: destroy_user_session_path, data: { turbo_method: :delete }) do
+          = t('.sign_out')
     - else
       = render_component(Common::LinkComponent, button: :ghost, href: new_user_session_path) do
         = t('.sign_in')
