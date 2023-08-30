@@ -24,6 +24,16 @@ RSpec.describe Common::LinkComponent, type: :component do
     expect(page).to have_selector('a[data-test="test"]')
   end
 
+  describe '.type' do
+    it 'returns link' do
+      expect(link.type).to eq(:link)
+    end
+
+    it 'returns button' do
+      expect(button.type).to eq(:button)
+    end
+  end
+
   describe '.type_classes' do
     {
       link: 'link link-hover link-primary',
