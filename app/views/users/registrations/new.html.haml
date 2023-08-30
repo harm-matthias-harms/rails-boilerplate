@@ -1,10 +1,11 @@
-= render_component(Common::HeadingComponent, tag: :h2) do
-  = t('.heading')
+.max-w-sm.mx-auto
+  = render_component(Common::HeadingComponent, tag: :h2) do
+    = t('.heading')
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
-  = f.labeled_password_field :password, autocomplete: 'new-password'
-  = f.labeled_password_field :password_confirmation, autocomplete: 'new-password'
-  = f.submit t('.submit')
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
+    = f.labeled_password_field :password, autocomplete: 'new-password'
+    = f.labeled_password_field :password_confirmation, autocomplete: 'new-password'
+    = f.submit t('.submit')
 
-= render 'users/shared/links'
+  = render 'users/shared/links'
