@@ -275,7 +275,7 @@ GEM
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
-    pg (1.5.3)
+    pg (1.5.4)
     propshaft (0.7.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -479,7 +479,7 @@ DEPENDENCIES
   jsbundling-rails (= 1.1.2)
   listen (= 3.8.0)
   lookbook (= 2.0.5)
-  pg (= 1.5.3)
+  pg (= 1.5.4)
   propshaft (= 0.7.0)
   puma (= 6.3.1)
   pundit (= 2.3.1)
