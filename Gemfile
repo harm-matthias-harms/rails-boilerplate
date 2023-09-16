@@ -76,7 +76,7 @@ group :development do
   gem 'database_consistency', '1.7.20', require: false
   gem 'haml_lint', '0.50.0', require: false
   gem 'i18n-tasks', '1.0.12', require: false
-  gem 'rubocop', '1.56.2', require: false
+  gem 'rubocop', '1.56.3', require: false
   gem 'rubocop-capybara', '2.18.0', require: false
   gem 'rubocop-factory_bot', '2.23.1', require: false
   gem 'rubocop-performance', '1.19.0', require: false
