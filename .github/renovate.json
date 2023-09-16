@@ -1,6 +1,7 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "schedule": [
-    "0 8 * * 6"
+    "* 8 * * 6"
   ],
   "timezone": "Europe/Berlin",
   "enabledManagers": [
