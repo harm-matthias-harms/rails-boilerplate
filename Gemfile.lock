@@ -432,7 +432,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
-    view_component (3.5.0)
+    view_component (3.6.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -502,7 +502,7 @@ DEPENDENCIES
   truemail (= 3.0.9)
   turbo-rails (= 1.4.0)
   tzinfo-data (= 1.2023.3)
-  view_component (= 3.5.0)
+  view_component (= 3.6.0)
   web-console (= 4.2.1)
 
 RUBY VERSION
