@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  include EmailValidatable
-
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
   validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
-  validates :email, :encrypted_password, :sign_in_count, presence: true
+  validates :encrypted_password, :sign_in_count, presence: true
+  validates :email, presence: true, 'valid_email_2/email': { disposable: true }
 
   enum role: { user: 0, admin: 1 }, _default: :user
 

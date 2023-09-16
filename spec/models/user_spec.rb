@@ -3,14 +3,16 @@
 RSpec.describe User do
   subject(:user) { build(:user) }
 
-  it { expect(described_class.ancestors).to include EmailValidatable }
-
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:encrypted_password) }
     it { is_expected.to validate_presence_of(:sign_in_count) }
     it { is_expected.to validate_uniqueness_of(:confirmation_token).allow_nil }
     it { is_expected.to validate_uniqueness_of(:reset_password_token).allow_nil }
+
+    it 'validates disposable email', :validate_email do
+      expect(build(:user, email: 'mena.augustus@dabrapids.com')).not_to be_valid
+    end
   end
 
   describe '.to_s' do
