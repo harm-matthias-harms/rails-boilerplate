@@ -5,6 +5,8 @@
   ],
   "timezone": "Europe/Berlin",
   "enabledManagers": [
-    "asdf"
+    "asdf",
+    "docker-compose",
+    "github-actions"
   ]
 }
