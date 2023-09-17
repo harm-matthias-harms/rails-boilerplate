@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/404', to: 'errors#not_found'
   get '/500', to: 'errors#internal_server_error'
+  Healthcheck.routes(self)
 
   devise_for :users
 
