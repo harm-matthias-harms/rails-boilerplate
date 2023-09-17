@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
 
   default_form_builder TailwindFormBuilder
 
+  rescue_from(ActionController::UnknownFormat) do
+    head :unsupported_media_type
+  end
+
+  rescue_from(ActionDispatch::Cookies::CookieOverflow) do
+    head :request_header_fields_too_large
+  end
+
   private
 
   def set_current_user

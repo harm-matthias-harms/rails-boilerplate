@@ -40,5 +40,7 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
 
     config.i18n.available_locales = %i[en]
     config.i18n.default_locale = :en
+
+    config.exceptions_app = routes
   end
 end
