@@ -64,6 +64,9 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
+HEALTHCHECK --interval=10s --timeout=5s --retries=3 \
+    CMD curl --fail http://localhost:3000/health || exit 1
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
