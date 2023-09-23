@@ -282,7 +282,7 @@ GEM
       rack
       railties (>= 7.0.0)
     public_suffix (5.0.3)
-    puma (6.3.1)
+    puma (6.4.0)
       nio4r (~> 2.0)
     pundit (2.3.1)
       activesupport (>= 3.0.0)
@@ -480,7 +480,7 @@ DEPENDENCIES
   lookbook (= 2.0.5)
   pg (= 1.5.4)
   propshaft (= 0.7.0)
-  puma (= 6.3.1)
+  puma (= 6.4.0)
   pundit (= 2.3.1)
   rails (= 7.0.8)
   rails-healthcheck (= 1.4.0)
