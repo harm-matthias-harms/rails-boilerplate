@@ -9,7 +9,7 @@ module.exports = {
     './app/javascript/**/*.js',
     './spec/components/previews/**/*.{html.haml,rb}'
   ],
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('@tailwindcss/typography')],
   theme: {
     extend: {
       fontFamily: {
@@ -19,5 +19,6 @@ module.exports = {
   },
   daisyui: {
     themes: ['winter']
-  }
+  },
+  safelist: ['prose']
 }

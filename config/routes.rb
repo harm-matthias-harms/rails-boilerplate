@@ -13,4 +13,10 @@ Rails.application.routes.draw do
   authenticate :user, ->(user) { user.admin? } do
     mount GoodJob::Engine => 'good_job'
   end
+
+  scope module: :home do
+    get :imprint
+    get :privacy_policy
+    get :terms_of_service
+  end
 end
