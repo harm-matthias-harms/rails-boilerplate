@@ -16,13 +16,13 @@ RSpec.describe Common::LinkComponent, type: :component do
   it 'renders button' do
     render_inline(button) { 'Button' }
 
-    expect(page).to have_selector('a.btn', text: 'Button')
+    expect(page).to have_css('a.btn', text: 'Button')
   end
 
   it 'renders link with data' do
     render_inline(link_with_data) { 'Link' }
 
-    expect(page).to have_selector('a[data-test="test"]')
+    expect(page).to have_css('a[data-test="test"]')
   end
 
   it 'renders link without href' do

@@ -6,7 +6,7 @@ RSpec.describe Layout::NotificationComponent, type: :component do
   it 'renders' do
     render_inline(notification)
 
-    expect(page).to have_selector('.alert.alert-success')
+    expect(page).to have_css('.alert.alert-success')
   end
 
   describe 'type' do
