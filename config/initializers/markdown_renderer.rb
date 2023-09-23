@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'digest'
 require 'redcarpet'
 
 class MarkdownRenderer < Redcarpet::Render::HTML
