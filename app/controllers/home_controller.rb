@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     skip_policy_scope
   end
 
-  def legal_notice
+  def imprint
     skip_authorization
   end
 

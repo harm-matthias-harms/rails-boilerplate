@@ -1,4 +1,4 @@
-# Legal notice
+# Imprint
 
 ## Responsible for the content of this website
 

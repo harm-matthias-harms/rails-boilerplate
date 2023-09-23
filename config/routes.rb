@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   scope module: :home do
-    get :legal_notice
+    get :imprint
     get :privacy_policy
     get :terms_of_service
   end

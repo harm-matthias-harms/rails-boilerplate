@@ -11,9 +11,9 @@ RSpec.describe HomeController do
     end
   end
 
-  describe '.legal_notice' do
+  describe '.imprint' do
     it 'returns http success' do
-      get legal_notice_path
+      get imprint_path
 
       expect(response).to have_http_status(:success)
     end
