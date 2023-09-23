@@ -16,7 +16,7 @@ RSpec.describe Common::DropdownComponent, type: :component do
       3.times { dropdown.with_entry(href: '#') { 'Entry' } }
     end
 
-    expect(page).to have_selector('.dropdown-content li a[href="#"]', text: 'Entry', count: 3)
+    expect(page).to have_css('.dropdown-content li a[href="#"]', text: 'Entry', count: 3)
   end
 
   describe '.align_class' do
