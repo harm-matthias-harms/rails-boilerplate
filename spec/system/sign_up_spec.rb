@@ -16,6 +16,18 @@ RSpec.describe 'Sign up' do
     expect(page).to have_content 'A message with a confirmation link has been sent to your email address.'
   end
 
+  it 'saves user' do
+    expect(User.find_by(email: user.email)).to be_present
+  end
+
+  it "saves user's privacy and terms of service consent" do
+    expect(User.find_by(email: user.email).consents).to be_present
+  end
+
+  it "saves user's privacy and terms of service consent text" do
+    expect(User.find_by(email: user.email).consents.first&.consent).to eq 'Privacy and Terms of Service'
+  end
+
   it 'sends confirmation email' do
     expect(last_email).to be_present
   end

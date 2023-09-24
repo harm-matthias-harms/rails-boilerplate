@@ -3,7 +3,8 @@
 class Consent < ApplicationRecord
   belongs_to :user
 
-  validates :consent, :ip, :type, :useragent, presence: true
+  validates :accepted, :consent, :ip, :type, :user_agent, presence: true
+  validates :accepted, inclusion: { in: [true] }
 end
 
 class Consent::PrivacyTos < Consent
@@ -18,10 +19,11 @@ end
 # Name              | Type               | Attributes
 # ----------------- | ------------------ | ---------------------------
 # **`id`**          | `uuid`             | `not null, primary key`
+# **`accepted`**    | `boolean`          | `default(FALSE), not null`
 # **`consent`**     | `text`             | `not null`
 # **`ip`**          | `inet`             | `not null`
 # **`type`**        | `text`             | `not null`
-# **`useragent`**   | `text`             | `not null`
+# **`user_agent`**  | `text`             | `not null`
 # **`created_at`**  | `datetime`         | `not null`
 # **`updated_at`**  | `datetime`         | `not null`
 # **`user_id`**     | `uuid`             | `not null`

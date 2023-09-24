@@ -18,9 +18,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_060331) do
   create_table "consents", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "user_id", null: false
     t.inet "ip", null: false
-    t.text "useragent", null: false
+    t.text "user_agent", null: false
     t.text "type", null: false
     t.text "consent", null: false
+    t.boolean "accepted", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_consents_on_user_id"
