@@ -3,7 +3,7 @@
 class Consent < ApplicationRecord
   belongs_to :user
 
-  validates :accepted, :consent, :ip, :type, :user_agent, presence: true
+  validates :consent, :ip, :type, :user_agent, presence: true
   validates :accepted, inclusion: { in: [true] }
 end
 

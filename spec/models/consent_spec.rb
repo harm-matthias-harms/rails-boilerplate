@@ -6,7 +6,6 @@ RSpec.describe Consent do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:accepted) }
     it { is_expected.to validate_presence_of(:consent) }
     it { is_expected.to validate_presence_of(:ip) }
     it { is_expected.to validate_presence_of(:type) }
