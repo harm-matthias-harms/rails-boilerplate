@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :consent_privacy_tos, class: 'Consent::PrivacyTos' do
     user
-    consent { 'This is the consent text' }
+    consent { 'Consent checkbox description' }
     ip { '127.0.0.1' }
     useragent { 'Mozilla/5.0' }
   end
