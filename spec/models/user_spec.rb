@@ -5,6 +5,7 @@ RSpec.describe User do
 
   describe 'associations' do
     it { is_expected.to have_many(:consents).dependent(:destroy) }
+    it { is_expected.to accept_nested_attributes_for(:consents) }
   end
 
   describe 'validations' do
