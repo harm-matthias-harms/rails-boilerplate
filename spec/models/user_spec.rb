@@ -4,7 +4,7 @@ RSpec.describe User do
   subject(:user) { build(:user) }
 
   describe 'associations' do
-    it { is_expected.to have_many(:consents).dependent(:destroy) }
+    it { is_expected.to have_many(:consents).dependent(:delete_all) }
     it { is_expected.to accept_nested_attributes_for(:consents) }
   end
 

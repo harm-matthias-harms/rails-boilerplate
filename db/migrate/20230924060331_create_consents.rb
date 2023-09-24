@@ -3,7 +3,7 @@
 class CreateConsents < ActiveRecord::Migration[7.0]
   def change
     create_table :consents, id: :uuid do |t|
-      t.references :user, null: false, foreign_key: true, type: :uuid
+      t.references :user, null: false, type: :uuid
       t.inet :ip, null: false
       t.text :user_agent, null: false
       t.text :type, null: false
@@ -12,5 +12,7 @@ class CreateConsents < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_foreign_key :consents, :users, column: :user_id, on_delete: :cascade
   end
 end

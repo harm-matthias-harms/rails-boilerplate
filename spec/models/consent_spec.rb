@@ -39,6 +39,6 @@ end
 #
 # ### Foreign Keys
 #
-# * `fk_rails_...`:
+# * `fk_rails_...` (_ON DELETE => cascade_):
 #     * **`user_id => users.id`**
 #
