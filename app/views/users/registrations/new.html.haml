@@ -6,6 +6,12 @@
     = f.labeled_email_field :email, autofocus: true, autocomplete: 'email'
     = f.labeled_password_field :password, autocomplete: 'new-password'
     = f.labeled_password_field :password_confirmation, autocomplete: 'new-password'
+    - privacy_tos_consent = Consent::PrivacyTos.new(consent: Consent::PrivacyTos.human_attribute_name(:accepted))
+    = f.fields_for(:consents, privacy_tos_consent) do |consent|
+      = consent.hidden_field :type
+      = consent.hidden_field :consent
+      -# i18n-tasks-use t('activerecord.attributes.consent/privacy_tos.accepted')
+      = consent.labeled_check_box :accepted
     = f.submit t('.submit')
 
   = render 'users/shared/links'

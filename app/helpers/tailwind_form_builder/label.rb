@@ -9,7 +9,7 @@ module TailwindFormBuilder::Label
   def label(attribute, text = nil, options = {}, &)
     super(attribute, text, label_options(attribute, options)) do |builder|
       label = template.tag.span(class: ['label-text font-bold', required?(attribute) && "after:content-['*']"]) do
-        text || builder.translation
+        text || builder.translation.html_safe # rubocop:disable Rails/OutputSafety
       end
 
       safe_join([block_given? && template.capture(builder, &), label].select(&:itself))

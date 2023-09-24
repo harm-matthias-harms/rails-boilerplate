@@ -14,7 +14,8 @@ module Deviseable
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:consents_attributes])
+    devise_parameter_sanitizer.permit(:sign_up,
+                                      keys: [consents_attributes: %i[consent accepted type ip user_agent]])
   end
 
   def set_consent_fields
