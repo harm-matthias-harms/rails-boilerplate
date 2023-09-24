@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
+  has_many :consents, dependent: :destroy
+
   validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
   validates :encrypted_password, :sign_in_count, presence: true
   validates :email, presence: true, 'valid_email_2/email': { disposable: true }
