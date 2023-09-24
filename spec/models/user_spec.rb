@@ -3,6 +3,11 @@
 RSpec.describe User do
   subject(:user) { build(:user) }
 
+  describe 'associations' do
+    it { is_expected.to have_many(:consents).dependent(:delete_all) }
+    it { is_expected.to accept_nested_attributes_for(:consents) }
+  end
+
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:encrypted_password) }
