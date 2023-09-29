@@ -6,6 +6,7 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+<% if Rails.env.production? %>
 s3:
   service: S3
   endpoint: <%= Settings.s3.endpoint %>
@@ -13,3 +14,4 @@ s3:
   bucket: <%= Settings.s3.bucket %>
   access_key_id: <%= Settings.s3.access_key_id %>
   secret_access_key: <%= Settings.s3.secret_access_key %>
+<% end %>

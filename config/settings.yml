@@ -4,9 +4,3 @@ app:
 mail:
   sender: noreply@rails-boilerplate.io
   support: support@rails-boilerplate.io
-s3:
-  endpoint:
-  region:
-  bucket:
-  access_key_id:
-  secret_access_key:
