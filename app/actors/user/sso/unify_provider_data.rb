@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User::Sso::UnifyProviderData < Actor
+class User::Sso::UnifyProviderData < ApplicationActor
   input :provider, type: Symbol, inclusion: Settings.sso.keys
   input :auth, type: OmniAuth::AuthHash
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User::Sso::CreateOrUpdateUser < Actor
+class User::Sso::CreateOrUpdateUser < ActiveRecordActor
   input :identity, type: Identity
   input :email, type: String
 

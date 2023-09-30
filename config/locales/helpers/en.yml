@@ -5,6 +5,9 @@ en:
       create:
         error: "${model} not created."
         success: "${model} created successfully."
+      google_oauth2:
+        error: Could not authenticate you from Google account.
+        success: Successfully authenticated from Google account.
       update:
         error: "${model} not updated."
         success: "${model} updated successfully."

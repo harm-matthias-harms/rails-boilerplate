@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User::Sso::FindOrInitializeIdentity < Actor
+class User::Sso::FindOrInitializeIdentity < ActiveRecordActor
   input :provider, type: Symbol, inclusion: Settings.sso.keys
   input :uid, type: String
   input :current_user, type: User, allow_nil: true, default: nil
