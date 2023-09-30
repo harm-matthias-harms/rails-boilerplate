@@ -1,0 +1,7 @@
+DatabaseConsistencySettings:
+  color: true
+
+Identity:
+  index_identities_on_user_id:
+    RedundantIndexChecker:
+      enabled: false

@@ -1,30 +1,10 @@
 # frozen_string_literal: true
 
-class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :trackable, :confirmable,
-         :omniauthable, omniauth_providers: Settings.sso.keys
-
-  has_many :consents, dependent: :delete_all
-  has_many :identities, dependent: :delete_all
-
-  validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
-  validates :encrypted_password, :sign_in_count, presence: true
-  validates :email, presence: true, 'valid_email_2/email': { disposable: true }
-
-  enum role: { user: 0, admin: 1 }, _default: :user
-
-  accepts_nested_attributes_for :consents
-
-  def to_s
-    email
-  end
-
-  private
-
-  def send_devise_notification(notification, *)
-    devise_mailer.send(notification, self, *).deliver_later
+FactoryBot.define do
+  factory :identity do
+    user
+    provider { Settings.sso.keys.sample }
+    uid { Faker::Internet.uuid }
   end
 end
 
