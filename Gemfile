@@ -69,19 +69,19 @@ group :development do
   # gem "spring"
 
   gem 'listen', '3.8.0'
-  gem 'lookbook', '2.0.5'
+  gem 'lookbook', '2.1.1'
 
   gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.0.1', require: false
   gem 'database_consistency', '1.7.20', require: false
   gem 'haml_lint', '0.50.0', require: false
   gem 'i18n-tasks', '1.0.12', require: false
-  gem 'rubocop', '1.56.3', require: false
+  gem 'rubocop', '1.56.4', require: false
   gem 'rubocop-capybara', '2.19.0', require: false
   gem 'rubocop-factory_bot', '2.24.0', require: false
   gem 'rubocop-performance', '1.19.1', require: false
-  gem 'rubocop-rails', '2.21.1', require: false
-  gem 'rubocop-rspec', '2.24.0', require: false
+  gem 'rubocop-rails', '2.21.2', require: false
+  gem 'rubocop-rspec', '2.24.1', require: false
 end
 
 group :test do
@@ -90,7 +90,7 @@ group :test do
   gem 'database_cleaner-active_record', '2.1.0'
   gem 'faker', '3.2.1'
   gem 'fuubar', '2.5.1', require: false
-  gem 'selenium-webdriver', '4.12.0'
+  gem 'selenium-webdriver', '4.13.1'
   gem 'shoulda-matchers', '5.3.0', require: false
   gem 'simplecov', '0.22.0', require: false
   gem 'simplecov-cobertura', '2.1.0'
@@ -101,7 +101,7 @@ gem 'active_storage_validations', '1.0.4'
 gem 'config', '4.2.1'
 gem 'devise', '4.9.2'
 gem 'goldiloader', '5.0.0'
-gem 'good_job', '3.19.2'
+gem 'good_job', '3.19.3'
 gem 'haml-rails', '2.1.0'
 gem 'omniauth', '2.1.1'
 gem 'omniauth-google-oauth2', '1.1.1'
@@ -111,5 +111,5 @@ gem 'rails-healthcheck', '1.4.0'
 gem 'redcarpet', '3.6.0'
 gem 'service_actor', '3.7.0'
 gem 'service_actor-rails', '1.0.0'
-gem 'valid_email2', '5.0.3'
+gem 'valid_email2', '5.0.4'
 gem 'view_component', '3.6.0'
