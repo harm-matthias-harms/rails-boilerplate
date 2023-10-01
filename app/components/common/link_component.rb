@@ -20,11 +20,10 @@ class Common::LinkComponent < ApplicationComponent
     return unless type == :button
     return if button == true
 
-    case button.to_sym
-    when :primary
-      'btn-primary'
-    when :ghost
-      'btn-ghost'
-    end
+    {
+      primary: 'btn-primary',
+      ghost: 'btn-ghost',
+      block: 'btn-block'
+    }[button.to_sym]
   end
 end

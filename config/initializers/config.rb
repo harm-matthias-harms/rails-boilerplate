@@ -60,9 +60,6 @@ Config.setup do |config|
         required(:username).filled(:string)
         required(:password).filled(:string)
       end
-      required(:redis).schema do
-        required(:url).filled(:string)
-      end
       required(:mail).schema do
         required(:sender).filled(:string)
         required(:support).filled(:string)
@@ -75,6 +72,9 @@ Config.setup do |config|
           required(:enable_starttls_auto).filled(:bool)
         end
       end
+      required(:redis).schema do
+        required(:url).filled(:string)
+      end
       if Rails.env.production?
         required(:s3).schema do
           required(:endpoint).filled(:string)
@@ -82,6 +82,12 @@ Config.setup do |config|
           required(:bucket).filled(:string)
           required(:access_key_id).filled(:string)
           required(:secret_access_key).filled(:string)
+        end
+      end
+      required(:sso).schema do
+        required(:google_oauth2).schema do
+          required(:client_id).filled(:string)
+          required(:client_secret).filled(:string)
         end
       end
     end

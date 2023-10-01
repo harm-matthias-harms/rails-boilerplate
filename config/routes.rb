@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get '/500', to: 'errors#internal_server_error'
   Healthcheck.routes(self)
 
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
 
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 
@@ -19,4 +21,6 @@ Rails.application.routes.draw do
     get :privacy_policy
     get :terms_of_service
   end
+
+  resources :identities, only: %i[destroy]
 end

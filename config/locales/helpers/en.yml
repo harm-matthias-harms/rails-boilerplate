@@ -5,9 +5,17 @@ en:
       create:
         error: "${model} not created."
         success: "${model} created successfully."
+      identities:
+        destroy:
+          error: Service could not be disconnected.
+          success: Service disconnected successfully.
       update:
         error: "${model} not updated."
         success: "${model} updated successfully."
+      users/omniauth_callbacks:
+        google_oauth2:
+          error: Could not authenticate you from Google account.
+          success: Successfully authenticated from Google account.
     forms:
       submit:
         required: All fields marked with * are required.
@@ -20,3 +28,7 @@ en:
         default: all
       title:
         default: Rails Boilerplate
+    sso:
+      disconnect: Disconnect %{provider}
+      google_oauth2: Google
+      sign_in_with: Sign in with %{provider}

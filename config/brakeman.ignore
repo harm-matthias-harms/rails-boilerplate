@@ -1,0 +1,29 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "25f05b395fb988b0d77551e5017a8d0bd971e0f20d088759190b7598daf68358",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Identity#find`",
+      "file": "app/controllers/identities_controller.rb",
+      "line": 5,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Identity.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "IdentitiesController",
+        "method": "destroy"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "cwe_id": [
+        285
+      ],
+      "note": "Handled by pundit"
+    }
+  ],
+  "updated": "2023-10-01 10:34:25 +0200",
+  "brakeman_version": "6.0.1"
+}
