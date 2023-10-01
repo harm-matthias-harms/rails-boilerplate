@@ -42,5 +42,7 @@ module RailsBoilerplate # rubocop:disable Style/ClassAndModuleChildren
     config.i18n.default_locale = :en
 
     config.exceptions_app = routes
+
+    config.require_master_key = false
   end
 end

@@ -48,7 +48,9 @@ Config.setup do |config|
   # config.env_parse_values = true
 
   # Validate presence and type of specific config values. Check https://github.com/dry-rb/dry-validation for details.
-  unless ENV.fetch('SETTINGS_SKIP_VALIDATION', false)
+  if ENV.fetch('SETTINGS_SKIP_VALIDATION', false)
+    ENV['SECRET_KEY_BASE'] = SecureRandom.hex(64)
+  else
     config.schema do
       required(:app).schema do
         required(:name).filled(:string)
@@ -92,6 +94,10 @@ Config.setup do |config|
       end
     end
   end
+
+  # Fail loudly when trying to access a non-existent setting.
+  #
+  config.fail_on_missing = true
 
   # Evaluate ERB in YAML config files at load time.
   #
