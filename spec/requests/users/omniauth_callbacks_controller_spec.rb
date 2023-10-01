@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Users::OmniauthCallbacksController do
-  subject(:response) { get url }
-
   let(:email) { Faker::Internet.email }
 
   before do
@@ -11,31 +9,34 @@ RSpec.describe Users::OmniauthCallbacksController do
   end
 
   Settings.sso.each do |provider, _|
-    describe "GET /users/auth/#{provider}/callback" do
-      let(:url) { "/users/auth/#{provider}/callback" }
-
+    describe ".#{provider}" do
       before do
         OmniAuth.config.mock_auth[provider] =
           OmniAuth::AuthHash.new(provider:, uid: '1234567890', info: { email: })
         Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[provider]
       end
 
-      it { expect(response).to redirect_to(root_path) }
+      context 'when user does not exist' do
+        before { get "/users/auth/#{provider}/callback" }
 
-      it 'renders flash' do
-        response
-
-        expect(flash[:success]).to eq('Successfully authenticated from Google account.')
+        it { expect(response).to redirect_to(root_path) }
+        it { expect(flash[:success]).to eq('Successfully authenticated from Google account.') }
       end
 
       context 'when user exists' do
-        before { create(:user, email:) }
+        before do
+          create(:user, email:)
+          get "/users/auth/#{provider}/callback"
+        end
 
         it { expect(response).to redirect_to(root_path) }
       end
 
       context 'when user is signed in' do
-        before { sign_in create(:user, email:) }
+        before do
+          sign_in create(:user, email:)
+          get "/users/auth/#{provider}/callback"
+        end
 
         it { expect(response).to redirect_to(root_path) }
       end
@@ -43,21 +44,18 @@ RSpec.describe Users::OmniauthCallbacksController do
       context 'with failing actor' do
         before do
           mock_actor(User::SingleSignOn, result: {}, success: false)
+          get "/users/auth/#{provider}/callback"
         end
 
         it { expect(response).to redirect_to(new_user_session_path) }
-
-        it 'renders flash' do
-          response
-
-          expect(flash[:error]).to eq('Could not authenticate you from Google account.')
-        end
+        it { expect(flash[:error]).to eq('Could not authenticate you from Google account.') }
       end
 
       context 'with failing actor when user is signed in' do
         before do
           mock_actor(User::SingleSignOn, result: {}, success: false)
           sign_in create(:user, email:)
+          get "/users/auth/#{provider}/callback"
         end
 
         it { expect(response).to redirect_to(root_path) }
@@ -67,6 +65,7 @@ RSpec.describe Users::OmniauthCallbacksController do
         before do
           OmniAuth.config.mock_auth[provider] = :invalid_credentials
           Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[provider]
+          get "/users/auth/#{provider}/callback"
         end
 
         it { expect(response).to redirect_to(new_user_session_path) }
