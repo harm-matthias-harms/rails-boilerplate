@@ -21,4 +21,6 @@ Rails.application.routes.draw do
     get :privacy_policy
     get :terms_of_service
   end
+
+  resources :identities, only: %i[destroy]
 end

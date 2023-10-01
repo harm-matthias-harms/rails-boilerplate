@@ -21,6 +21,21 @@
 
     = f.submit t('.submit')
 
+  - if current_user.identities.any?
+    .mb-10
+      = render_component(Common::HeadingComponent, tag: :h3) do
+        = t('.disconnect_service.heading')
+      - current_user.identities.each do |identity|
+        = render_component(Common::LinkComponent,
+                           button: :block, href: identity_path(identity),
+                           data: { turbo_method: :delete,
+                                   turbo_confirm: t('.disconnect_service.confirm',
+                                                    provider: t("helpers.sso.#{identity.provider}")) }) do
+          = image_tag "sso/#{identity.provider}.png",
+                      alt: t('helpers.sso.disconnect', provider: t("helpers.sso.#{identity.provider}")),
+                      class: 'h-6'
+          = t('helpers.sso.disconnect', provider: t("helpers.sso.#{identity.provider}"))
+
   = render_component(Common::HeadingComponent, tag: :h3) do
     = t('.cancel_account.heading')
   = button_to t('.cancel_account.action'),

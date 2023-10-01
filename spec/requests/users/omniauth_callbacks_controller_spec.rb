@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Users::OmniauthCallbacks' do
+RSpec.describe Users::OmniauthCallbacksController do
   subject(:response) { get url }
 
   let(:email) { Faker::Internet.email }

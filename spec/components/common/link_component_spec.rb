@@ -58,6 +58,7 @@ RSpec.describe Common::LinkComponent, type: :component do
       true => nil,
       primary: 'btn-primary',
       ghost: 'btn-ghost',
+      block: 'btn-block',
       random: nil
     }.each do |button, classes|
       it "returns #{classes} for button #{button}" do

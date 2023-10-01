@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Errors' do
+RSpec.describe ErrorsController do
   describe 'GET /404' do
     it 'returns http not found' do
       get '/404'

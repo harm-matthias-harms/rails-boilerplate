@@ -106,6 +106,9 @@ en:
           heading: Cancel account
         changed_email: 'Currently waiting confirmation for: %{resource.unconfirmed_email}'
         current_password_hint: "(we need your current password to confirm your changes)"
+        disconnect_service:
+          confirm: Are you sure, you want to disconnect your %{provider} account?
+          heading: Disconnect service
         heading: Edit account
         password_hint: "(leave blank if you don't want to change it)"
         submit: Update
