@@ -50,6 +50,14 @@ Config.setup do |config|
   # Validate presence and type of specific config values. Check https://github.com/dry-rb/dry-validation for details.
   if ENV.fetch('SETTINGS_SKIP_VALIDATION', false)
     ENV['SECRET_KEY_BASE'] = SecureRandom.hex(64)
+    ENV['SETTINGS__MAIL__ADDRESS'] = 'smtp.foo.bar'
+    ENV['SETTINGS__MAIL__PORT'] = '587'
+    ENV['SETTINGS__MAIL__USERNAME'] = 'foo'
+    ENV['SETTINGS__MAIL__PASSWORD'] = 'bar'
+    ENV['SETTINGS__MAIL__AUTHENTICATION'] = 'plain'
+    ENV['SETTINGS__MAIL__ENABLE_STARTTLS_AUTO'] = 'true'
+    ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_ID'] = 'foo'
+    ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_SECRET'] = 'bar'
   else
     config.schema do
       required(:app).schema do
