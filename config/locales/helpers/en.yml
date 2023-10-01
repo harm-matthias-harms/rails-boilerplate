@@ -23,3 +23,6 @@ en:
         default: all
       title:
         default: Rails Boilerplate
+    sso:
+      google_oauth2: Google
+      sign_in_with: Sign in with %{provider}
