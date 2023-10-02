@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 
   authenticate :user, ->(user) { user.admin? } do
-    mount GoodJob::Engine => 'good_job'
+    mount GoodJob::Engine, at: 'good_job'
+    mount Blazer::Engine, at: 'blazer'
   end
 
   scope module: :home do

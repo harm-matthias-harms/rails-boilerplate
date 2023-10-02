@@ -11,7 +11,12 @@ ActiveRecordDoctor.configure do
     'good_jobs',
     'good_job_executions',
     'ahoy_events',
-    'ahoy_visits'
+    'ahoy_visits',
+    'blazer_audits',
+    'blazer_checks',
+    'blazer_dashboards',
+    'blazer_dashboard_queries',
+    'blazer_queries'
   ]
 
   detector :undefined_table_references,
@@ -21,7 +26,8 @@ ActiveRecordDoctor.configure do
              'ActiveStorage::VariantRecord',
              'ActiveStorage::Blob',
              'ActiveStorage::Attachment',
-             'ActionMailbox::InboundEmail'
+             'ActionMailbox::InboundEmail',
+             'Blazer::Upload'
            ]
 
   detector :missing_presence_validation,
@@ -35,5 +41,11 @@ ActiveRecordDoctor.configure do
   detector :extraneous_indexes,
            ignore_indexes: [
              'index_identities_on_user_id'
+           ]
+
+  detector :incorrect_dependent_option,
+           ignore_models: [
+             'Blazer::Query',
+             'Blazer::Dashboard'
            ]
 end

@@ -8,7 +8,13 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery prepend: true, with: :exception
 
-  default_form_builder TailwindFormBuilder
+  def default_form_builder
+    if controller_path.start_with?('blazer')
+      super
+    else
+      TailwindFormBuilder
+    end
+  end
 
   rescue_from(ActionController::UnknownFormat) do
     head :unsupported_media_type
