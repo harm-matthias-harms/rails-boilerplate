@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   include Flashable
   include Deviseable
+  include Trackable
   include Pundit::Authorization
 
   protect_from_forgery prepend: true, with: :exception
