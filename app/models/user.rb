@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :consents, dependent: :delete_all
   has_many :identities, dependent: :delete_all
+  has_many :ahoy_visits, class_name: 'Ahoy::Visit', dependent: :destroy
 
   validates :confirmation_token, :reset_password_token, uniqueness: true, allow_nil: true
   validates :encrypted_password, :sign_in_count, presence: true

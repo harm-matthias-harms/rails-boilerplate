@@ -5,3 +5,7 @@ Identity:
   index_identities_on_user_id:
     RedundantIndexChecker:
       enabled: false
+Ahoy::Event:
+  enabled: false
+Ahoy::Visit:
+  enabled: false
