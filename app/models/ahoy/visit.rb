@@ -49,4 +49,7 @@ end
 #     * **`user_id`**
 # * `index_ahoy_visits_on_visit_token` (_unique_):
 #     * **`visit_token`**
+# * `index_ahoy_visits_on_visitor_token_and_started_at`:
+#     * **`visitor_token`**
+#     * **`started_at`**
 #

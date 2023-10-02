@@ -98,7 +98,7 @@ end
 
 gem 'active_record_doctor', '1.12.0'
 gem 'active_storage_validations', '1.0.4'
-gem 'ahoy_matey', '4.2.1'
+gem 'ahoy_matey', '5.0.1'
 gem 'config', '4.2.1'
 gem 'devise', '4.9.2'
 gem 'goldiloader', '5.0.0'
