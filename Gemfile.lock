@@ -93,7 +93,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    blazer (3.0.0)
+    blazer (3.0.1)
       activerecord (>= 6.1)
       chartkick (>= 5)
       railties (>= 6.1)
@@ -518,7 +518,7 @@ DEPENDENCIES
   active_storage_validations (= 1.0.4)
   ahoy_matey (= 5.0.2)
   annotate (= 3.2.0)
-  blazer (= 3.0.0)
+  blazer (= 3.0.1)
   bootsnap (= 1.16.0)
   brakeman (= 6.0.1)
   capybara (= 3.39.2)
