@@ -196,10 +196,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.51.0.tgz#6d419c240cfb2b66da37df230f7e7eef801c32fa"
   integrity sha512-HxjQ8Qn+4SI3/AFv6sOrDB+g6PpUTDwSJiQqOrnneEk8L71161srI9gjzzZvYVbzHiVg/BvcH95+cK/zfIt4pg==
 
-"@fontsource/nunito@5.0.13":
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.13.tgz#9c59c22fa87cfad619760c6f15b8a1c9cb309cf0"
-  integrity sha512-bPtilOF75RToJZBHr5+L5Vuilu2J8wbK6gyHTBawhYWJJ4L/+c6qhSZqfDVkDamc9WbGpcRaOFw9n3AYsn+3yQ==
+"@fontsource/nunito@5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.14.tgz#34bb7675977d0f91f6afcbdb8fc6838027d1935f"
+  integrity sha512-KwTWiYT0Mx2i/vcNesiU6ABHPUIqArmUlEkPq6j9GIjTNCiAwdhF+Gj5vgFfVV5/3BNiX81H625DaUs3tH10TQ==
 
 "@fortawesome/fontawesome-free@6.4.2":
   version "6.4.2"
