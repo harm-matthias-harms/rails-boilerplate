@@ -64,6 +64,7 @@ RSpec.describe Users::OmniauthCallbacksController do
       context 'with invalid credentials' do
         before do
           OmniAuth.config.mock_auth[provider] = :invalid_credentials
+          OmniAuth.config.logger = Logger.new('/dev/null')
           Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[provider]
           get "/users/auth/#{provider}/callback"
         end
