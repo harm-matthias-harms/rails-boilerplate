@@ -97,7 +97,7 @@ group :test do
 end
 
 gem 'active_record_doctor', '1.12.0'
-gem 'active_storage_validations', '1.0.4'
+gem 'active_storage_validations', '1.1.1'
 gem 'ahoy_matey', '5.0.2'
 gem 'blazer', '3.0.1'
 gem 'config', '5.0.0'
