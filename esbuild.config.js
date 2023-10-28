@@ -31,8 +31,6 @@ buildContext({
   entryPoints: ['nunito.css', 'fontawesome.css'],
   outdir: path.join(process.cwd(), 'app/assets/builds/fonts'),
   absWorkingDir: path.join(process.cwd(), 'app/assets/fonts'),
-  assetNames: '[name]-00000000.digested',
-  entryNames: '[name]-00000000.digested',
   loader: {
     '.woff': 'file',
     '.woff2': 'file',
