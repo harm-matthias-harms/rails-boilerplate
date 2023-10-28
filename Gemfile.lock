@@ -333,7 +333,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
-    propshaft (0.7.0)
+    propshaft (0.8.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
@@ -561,7 +561,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (= 1.1.1)
   omniauth-rails_csrf_protection (= 1.0.1)
   pg (= 1.5.4)
-  propshaft (= 0.7.0)
+  propshaft (= 0.8.0)
   puma (= 6.4.0)
   pundit (= 2.3.1)
   rails (= 7.1.1)
