@@ -193,7 +193,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faker (3.2.1)
+    faker (3.2.2)
       i18n (>= 1.8.11, < 2)
     faraday (2.7.11)
       base64
@@ -547,7 +547,7 @@ DEPENDENCIES
   debug (= 1.8.0)
   devise (= 4.9.3)
   factory_bot_rails (= 6.2.0)
-  faker (= 3.2.1)
+  faker (= 3.2.2)
   fuubar (= 2.5.1)
   goldiloader (= 5.0.0)
   good_job (= 3.20.0)
