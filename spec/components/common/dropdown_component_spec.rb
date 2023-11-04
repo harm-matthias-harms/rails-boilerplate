@@ -3,20 +3,24 @@
 RSpec.describe Common::DropdownComponent, type: :component do
   subject(:dropdown) { described_class.new }
 
-  it 'renders the dropdown label' do
-    render_inline(dropdown) do |dropdown|
-      dropdown.with_label(button: :ghost) { 'Dropdown' }
+  describe '.render' do
+    subject do
+      render_inline(dropdown) do |dropdown|
+        dropdown.with_label(button: :ghost) { 'Dropdown' }
+      end
     end
 
-    expect(page).to have_link('Dropdown', href: 'javascript:;', class: 'btn btn-ghost')
+    it { is_expected.to have_link('Dropdown', href: 'javascript:;', class: 'btn btn-ghost') }
   end
 
-  it 'renders the dropdown entries' do
-    render_inline(dropdown) do |dropdown|
-      3.times { dropdown.with_entry(href: '#') { 'Entry' } }
+  context 'with multiple entries' do
+    subject do
+      render_inline(dropdown) do |dropdown|
+        3.times { dropdown.with_entry(href: '#') { 'Entry' } }
+      end
     end
 
-    expect(page).to have_css('.dropdown-content li a[href="#"]', text: 'Entry', count: 3)
+    it { is_expected.to have_css('.dropdown-content li a[href="#"]', text: 'Entry', count: 3) }
   end
 
   describe '.align_class' do
@@ -25,9 +29,7 @@ RSpec.describe Common::DropdownComponent, type: :component do
       :start => nil,
       :end => 'dropdown-end'
     }.each do |align, expected_class|
-      it "returns #{expected_class.inspect} for #{align.inspect}" do
-        expect(described_class.new(align:).align_class).to eq(expected_class)
-      end
+      it { expect(described_class.new(align:).align_class).to eq(expected_class) }
     end
   end
 
@@ -39,9 +41,7 @@ RSpec.describe Common::DropdownComponent, type: :component do
       :left => 'dropdown-left',
       :bottom => 'dropdown-bottom'
     }.each do |direction, expected_class|
-      it "returns #{expected_class.inspect} for #{direction.inspect}" do
-        expect(described_class.new(direction:).direction_class).to eq(expected_class)
-      end
+      it { expect(described_class.new(direction:).direction_class).to eq(expected_class) }
     end
   end
 end

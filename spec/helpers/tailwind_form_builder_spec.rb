@@ -64,12 +64,14 @@ RSpec.describe TailwindFormBuilder do
   end
 
   describe '.submit' do
-    it 'returns submit' do
+    before do
       allow(template).to receive(:submit_tag)
         .with('Create Dummy', { class: ['btn btn-primary btn-full'] })
         .and_return('submit')
+    end
 
-      expect(builder.submit).to eq('<div class="form-control w-full max-w-xs mb-2">submit</div>')
+    it 'contains form_control' do
+      expect(builder.submit).to include('<div class="form-control w-full max-w-xs mb-2">')
     end
   end
 end

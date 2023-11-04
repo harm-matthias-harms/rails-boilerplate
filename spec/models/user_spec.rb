@@ -22,9 +22,7 @@ RSpec.describe User do
   end
 
   describe '.to_s' do
-    it 'returns email' do
-      expect(user.to_s).to eq user.email
-    end
+    it { expect(user.to_s).to eq user.email }
   end
 end
 
