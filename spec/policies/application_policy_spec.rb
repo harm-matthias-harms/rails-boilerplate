@@ -11,8 +11,6 @@ RSpec.describe ApplicationPolicy, type: :policy do
   end
 
   permissions :show?, :create?, :destroy?, :edit?, :index?, :new?, :update? do
-    it 'denies access to public' do
-      expect(policy).not_to permit(nil, nil)
-    end
+    it { is_expected.not_to permit(nil, nil) }
   end
 end

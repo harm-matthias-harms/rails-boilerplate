@@ -9,5 +9,7 @@ RSpec.describe User::SingleSignOn, type: :actor do
   let(:email) { Faker::Internet.email }
   let(:auth) { OmniAuth::AuthHash.new(provider:, uid: '1234567890', info: { email: }) }
 
-  it { is_expected.to be_a_success }
+  describe '.result' do
+    it { is_expected.to be_a_success }
+  end
 end

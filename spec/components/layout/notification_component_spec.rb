@@ -3,10 +3,10 @@
 RSpec.describe Layout::NotificationComponent, type: :component do
   subject(:notification) { described_class.new(message: 'Model saved', type: :success) }
 
-  it 'renders' do
-    render_inline(notification)
+  describe '.render' do
+    subject { render_inline(notification) }
 
-    expect(page).to have_css('.alert.alert-success')
+    it { is_expected.to have_css('.alert.alert-success') }
   end
 
   describe 'type' do

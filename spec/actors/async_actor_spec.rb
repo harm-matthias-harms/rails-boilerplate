@@ -3,7 +3,7 @@
 RSpec.describe AsyncActor do
   subject(:actor) { described_class.new({}) }
 
-  describe '.call' do
+  describe '.result' do
     it 'calls actor job' do
       expect(ActorJob).to receive(:perform_later)
 

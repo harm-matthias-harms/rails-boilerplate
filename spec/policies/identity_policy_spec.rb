@@ -6,26 +6,9 @@ RSpec.describe IdentityPolicy, type: :policy do
   let(:user) { build(:user) }
 
   permissions :destroy? do
-    it 'grants access if user is owner' do
-      record = build(:identity, user:)
-
-      expect(policy).to permit(user, record)
-    end
-
-    it 'denies access if user is not owner' do
-      record = build(:identity, user: build(:user))
-
-      expect(policy).not_to permit(user, record)
-    end
-
-    it 'denies access if user is not logged in' do
-      record = build(:identity, user: build(:user))
-
-      expect(policy).not_to permit(nil, record)
-    end
-
-    it 'denies access if record is nil' do
-      expect(policy).not_to permit(user, nil)
-    end
+    it { is_expected.to permit(user, build(:identity, user:)) }
+    it { is_expected.not_to permit(user, build(:identity, user: build(:user))) }
+    it { is_expected.not_to permit(nil, build(:identity, user: build(:user))) }
+    it { is_expected.not_to permit(user, nil) }
   end
 end

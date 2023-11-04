@@ -8,12 +8,11 @@ RSpec.describe Blazer do
   end
 
   context 'when admin user' do
-    before { sign_in create(:user, :admin) }
-
-    it 'shows good_job dashboard' do
+    before do
+      sign_in create(:user, :admin)
       visit blazer_path
-
-      expect(page).to have_content 'New Query'
     end
+
+    it { expect(page).to have_content 'New Query' }
   end
 end
