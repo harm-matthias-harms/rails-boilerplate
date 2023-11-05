@@ -13,6 +13,11 @@ class MockedController < ApplicationController
     skip_authorization
     head :ok
   end
+
+  def create
+    skip_authorization
+    set_flash(:success, model: User)
+  end
 end
 
 RSpec.describe ApplicationController do
@@ -68,6 +73,28 @@ RSpec.describe ApplicationController do
 
       expect(Ahoy::Event.last.properties).to eq({ 'controller' => 'mocked', 'action' => 'random_action',
                                                   'format' => 'text/html' })
+    end
+  end
+
+  describe Flashable do
+    before do
+      Rails.application.routes.draw do
+        post '/create' => 'mocked#create'
+      end
+    end
+
+    after { Rails.application.reload_routes! }
+
+    it 'sets flash message' do
+      post '/create'
+
+      expect(flash[:success]).to eq('User created successfully.')
+    end
+
+    it 'sets flash.now for turbo frame request' do
+      post '/create', headers: { 'Turbo-Frame' => 'frame-id' }
+
+      expect(flash.now[:success]).to eq('User created successfully.')
     end
   end
 end
