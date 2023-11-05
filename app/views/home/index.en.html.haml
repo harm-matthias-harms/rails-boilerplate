@@ -1,0 +1,8 @@
+= render_component(Common::HeroComponent) do |hero|
+  :ruby
+    hero.with_heading(tag: :h1) { 'Build your next app faster' }
+    hero.with_image(src: 'https://picsum.photos/500/600', alt: 'Random photo', width: 500, height: 600)
+    hero.with_action(button: :primary, href: new_user_registration_path) { 'Get Started' }
+  - hero.with_paragraph do
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu.
