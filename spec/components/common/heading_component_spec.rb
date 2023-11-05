@@ -6,14 +6,14 @@ RSpec.describe Common::HeadingComponent, type: :component do
   describe '.render' do
     subject { render_inline(heading) { 'Hello, World!' } }
 
-    it { is_expected.to have_css('h1.text-4xl.text-primary.mb-4', text: 'Hello, World!') }
+    it { is_expected.to have_css('h1.text-5xl.text-primary.mb-4', text: 'Hello, World!') }
   end
 
   describe '.size' do
     {
-      h1: 'text-4xl',
-      h2: 'text-3xl',
-      h3: 'text-2xl',
+      h1: 'text-5xl',
+      h2: 'text-4xl',
+      h3: 'text-3xl',
       h4: 'text-xl font-bold',
       h5: 'text-lg font-bold',
       h6: 'text-base font-bold'
