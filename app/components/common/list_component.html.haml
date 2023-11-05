@@ -1,0 +1,6 @@
+%ul.list-inside{ class: list_style_type }
+  - items.each do |item|
+    %li{ class: [icon && 'flex gap-2 items-center'] }
+      - if icon.present?
+        %i{ class: icon }
+      = item
