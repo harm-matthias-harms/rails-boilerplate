@@ -5,9 +5,9 @@ class Common::HeadingComponent < ApplicationComponent
 
   def size
     {
-      h1: 'text-4xl',
-      h2: 'text-3xl',
-      h3: 'text-2xl',
+      h1: 'text-5xl',
+      h2: 'text-4xl',
+      h3: 'text-3xl',
       h4: 'text-xl font-bold',
       h5: 'text-lg font-bold',
       h6: 'text-base font-bold'
