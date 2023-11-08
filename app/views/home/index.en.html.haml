@@ -1,8 +1,48 @@
 = render_component(Common::HeroComponent) do |hero|
   :ruby
-    hero.with_heading(tag: :h1) { 'Build your next app faster' }
+    hero.with_heading { 'Build your next app faster' }
     hero.with_image(src: 'https://picsum.photos/500/600', alt: 'Random photo', width: 500, height: 600)
     hero.with_action(button: :primary, href: new_user_registration_path) { 'Get Started' }
   - hero.with_paragraph do
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu.
+    Build your next app faster with our open source templates and themes.
+    Our themes are open source for any use, even commercial.
+    Download what you like and get started!
+= render_component(Common::ShowcaseComponent) do |showcase|
+  :ruby
+    showcase.with_heading { 'Find the right solution for you' }
+    showcase.with_list do |list|
+       list.with_item { 'Lorem ipsum dolor sit amet consectetur adipisicing elit' }
+       list.with_item { 'Lorem ipsum dolor' }
+       list.with_item { 'Lorem ipsum dolor sit amet' }
+       list.with_item { 'Lorem ipsum adipisicing elit' }
+     end
+    showcase.with_image(src: 'https://picsum.photos/500/300', alt: 'Random photo', width: 500, height: 300)
+  - showcase.with_description do
+    Find the right solution for you with our open source templates and themes.
+    Our themes are open source for any use, even commercial.
+    Download what you like and get started!
+= render_component(Common::ShowcaseComponent) do |showcase|
+  :ruby
+    showcase.with_heading { 'Deploy your app in seconds' }
+    showcase.with_list do |list|
+       list.with_item { 'Lorem ipsum dolor sit amet consectetur adipisicing elit' }
+       list.with_item { 'Lorem ipsum dolor' }
+       list.with_item { 'Lorem ipsum dolor sit amet' }
+       list.with_item { 'Lorem ipsum adipisicing elit' }
+     end
+    showcase.with_image(src: 'https://picsum.photos/500/301', alt: 'Random photo', width: 500, height: 301)
+  - showcase.with_description do
+    Deploy your app in seconds with our open source templates and themes. We support all major cloud providers.
+= render_component(Common::ShowcaseComponent) do |showcase|
+  :ruby
+    showcase.with_heading { 'Get started with our free templates' }
+    showcase.with_list do |list|
+       list.with_item { 'Lorem ipsum dolor sit amet consectetur adipisicing elit' }
+       list.with_item { 'Lorem ipsum dolor' }
+       list.with_item { 'Lorem ipsum dolor sit amet' }
+       list.with_item { 'Lorem ipsum adipisicing elit' }
+     end
+    showcase.with_image(src: 'https://picsum.photos/500/302', alt: 'Random photo', width: 500, height: 302)
+  - showcase.with_description do
+    Get started with our free templates and themes. Our themes are open source for any use, even commercial.
+    Download what you like and get started!
