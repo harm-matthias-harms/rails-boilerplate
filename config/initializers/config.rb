@@ -82,6 +82,17 @@ Config.setup do |config|
           required(:enable_starttls_auto).filled(:bool)
         end
       end
+      required(:pay).schema do
+        required(:business).schema do
+          required(:name).filled(:string)
+          required(:address).filled(:string)
+        end
+        required(:stripe).schema do
+          required(:public_key).filled(:string)
+          required(:secret_key).filled(:string)
+          required(:signing_secret).filled(:string)
+        end
+      end
       required(:redis).schema do
         required(:url).filled(:string)
       end

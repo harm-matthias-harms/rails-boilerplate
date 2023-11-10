@@ -4,3 +4,7 @@ app:
 mail:
   sender: noreply@rails-boilerplate.io
   support: support@rails-boilerplate.io
+pay:
+  business:
+    name: "Rails Boilerplate"
+    address: "123 Main St"
