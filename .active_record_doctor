@@ -16,7 +16,13 @@ ActiveRecordDoctor.configure do
     'blazer_checks',
     'blazer_dashboards',
     'blazer_dashboard_queries',
-    'blazer_queries'
+    'blazer_queries',
+    'pay_customers',
+    'pay_merchants',
+    'pay_payment_methods',
+    'pay_subscriptions',
+    'pay_charges',
+    'pay_webhooks'
   ]
 
   detector :undefined_table_references,
@@ -46,6 +52,7 @@ ActiveRecordDoctor.configure do
   detector :incorrect_dependent_option,
            ignore_models: [
              'Blazer::Query',
-             'Blazer::Dashboard'
+             'Blazer::Dashboard',
+             'Pay::Customer'
            ]
 end
