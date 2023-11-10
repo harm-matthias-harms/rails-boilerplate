@@ -58,6 +58,9 @@ Config.setup do |config|
     ENV['SETTINGS__MAIL__ENABLE_STARTTLS_AUTO'] = 'true'
     ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_ID'] = 'foo'
     ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_SECRET'] = 'bar'
+    ENV['SETTINGS__PAY__STRIPE__PUBLIC_KEY'] = 'foo'
+    ENV['SETTINGS__PAY__STRIPE__SECRET_KEY'] = 'foo'
+    ENV['SETTINGS__PAY__STRIPE__SIGNING_SECRET'] = 'foo'
   else
     config.schema do
       required(:app).schema do
