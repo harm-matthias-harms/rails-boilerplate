@@ -69,6 +69,8 @@ jobs:
           bundler-cache: true
       - run: bin/rails db:prepare
       - run: bundle exec database_consistency
+        env:
+          SETTINGS_SKIP_VALIDATIONS: 'true'
   active_record_doctor:
     runs-on: ubuntu-latest
     services:
@@ -89,6 +91,8 @@ jobs:
           bundler-cache: true
       - run: bin/rails db:prepare
       - run: bundle exec rails active_record_doctor
+        env:
+          SETTINGS_SKIP_VALIDATIONS: 'true'
   standardjs:
     runs-on: ubuntu-latest
     steps:
