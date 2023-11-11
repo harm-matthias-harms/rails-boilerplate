@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ENV['STRIPE_PUBLIC_KEY'] = Settings.pay.stripe.public_key
-ENV['STRIPE_SECRET_KEY'] = Settings.pay.stripe.secret_key
+ENV['STRIPE_PRIVATE_KEY'] = Settings.pay.stripe.secret_key
 ENV['STRIPE_SIGNING_SECRET'] = Settings.pay.stripe.signing_secret
 
 Pay.setup do |config|
