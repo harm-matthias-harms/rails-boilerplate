@@ -94,6 +94,9 @@ Config.setup do |config|
           required(:public_key).filled(:string)
           required(:secret_key).filled(:string)
           required(:signing_secret).filled(:string)
+          required(:subscription).schema do
+            required(:premium).filled(:string)
+          end
         end
       end
       required(:redis).schema do
