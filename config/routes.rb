@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   end
 
   resources :identities, only: %i[destroy]
+  resources :subscriptions, only: %i[new]
 end
