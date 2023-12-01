@@ -16,7 +16,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  Settings.sso.each do |provider, _| # rubocop:disable Style/HashEachMethods
+  Settings.sso.to_h.each_key do |provider|
     alias_method provider, :omniauth
   end
 

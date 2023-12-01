@@ -8,7 +8,7 @@ RSpec.describe Users::OmniauthCallbacksController do
     Rails.application.env_config['devise.mapping'] = Devise.mappings[:user]
   end
 
-  Settings.sso.each do |provider, _| # rubocop:disable Style/HashEachMethods
+  Settings.sso.to_h.each_key do |provider|
     describe ".#{provider}" do
       before do
         OmniAuth.config.mock_auth[provider] =
