@@ -21,7 +21,7 @@ module Deviseable
   def set_consent_fields
     return if params.dig(:user, :consents_attributes).blank?
 
-    params[:user][:consents_attributes].each do |_, consent|
+    params[:user][:consents_attributes].each_value do |consent|
       consent[:ip] = request.remote_ip
       consent[:user_agent] = request.user_agent
     end
