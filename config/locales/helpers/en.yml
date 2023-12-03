@@ -9,6 +9,9 @@ en:
         destroy:
           error: Service could not be disconnected.
           success: Service disconnected successfully.
+      subscriptions:
+        new:
+          error: Something went wrong. Please try again.
       update:
         error: "%{model} not updated."
         success: "%{model} updated successfully."
