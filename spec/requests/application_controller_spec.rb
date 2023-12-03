@@ -58,14 +58,14 @@ RSpec.describe ApplicationController do
       expect(response).to have_http_status(:request_header_fields_too_large)
     end
 
-    it 'rescues from Pundit::NotAuthorizedError' do
+    it 'rescues from Pundit::NotAuthorizedError', :aggregate_failures do
       get '/unauthorized'
 
       expect(response).to redirect_to(new_user_session_url)
       expect(flash[:alert]).to eq('You need to sign in or sign up before continuing.')
     end
 
-    it 'rescues from Pundit::NotAuthorizedError with current_user' do
+    it 'rescues from Pundit::NotAuthorizedError with current_user', :aggregate_failures do
       sign_in create(:user)
       get '/unauthorized'
 
