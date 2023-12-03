@@ -13,5 +13,5 @@ Pay.setup do |config|
   config.automount_routes = true
   config.enabled_processors = [:stripe]
 
-  config.send_emails = true
+  config.send_emails = false
 end
