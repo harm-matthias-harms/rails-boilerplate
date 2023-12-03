@@ -61,6 +61,7 @@ jobs:
           - 5432:5432
     env:
       RAILS_ENV: test
+      SETTINGS_SKIP_VALIDATION: true
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -81,6 +82,7 @@ jobs:
           - 5432:5432
     env:
       RAILS_ENV: test
+      SETTINGS_SKIP_VALIDATION: true
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1

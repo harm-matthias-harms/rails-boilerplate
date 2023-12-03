@@ -14,4 +14,10 @@ class ApplicationComponent < ViewComponent::Base
     super
     kwargs.each { |name, value| instance_variable_set("@#{name}", value) }
   end
+
+  def policy(record, policy_class: nil)
+    return Pundit.policy(Current.user, record) if policy_class.nil?
+
+    policy_class.new(Current.user, record)
+  end
 end

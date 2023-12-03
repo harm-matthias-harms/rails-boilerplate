@@ -9,6 +9,9 @@ en:
         destroy:
           error: Service could not be disconnected.
           success: Service disconnected successfully.
+      subscriptions:
+        new:
+          error: Something went wrong. Please try again.
       update:
         error: "%{model} not updated."
         success: "%{model} updated successfully."
@@ -28,6 +31,9 @@ en:
         default: all
       title:
         default: Rails Boilerplate
+    pundit:
+      not_authenticated: You need to sign in or sign up before continuing.
+      not_authorized: You are not authorized to perform this action.
     sso:
       disconnect: Disconnect %{provider}
       google_oauth2: Google

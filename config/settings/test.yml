@@ -3,6 +3,8 @@ database:
   port: 5432
   username: postgres
   password: postgres
+pay:
+  default_processor: fake_processor
 redis:
   url: redis://localhost:6379/1
 sso:

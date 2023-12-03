@@ -58,6 +58,9 @@ Config.setup do |config|
     ENV['SETTINGS__MAIL__ENABLE_STARTTLS_AUTO'] = 'true'
     ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_ID'] = 'foo'
     ENV['SETTINGS__SSO__GOOGLE_OAUTH2__CLIENT_SECRET'] = 'bar'
+    ENV['SETTINGS__PAY__STRIPE__PUBLIC_KEY'] = 'foo'
+    ENV['SETTINGS__PAY__STRIPE__SECRET_KEY'] = 'foo'
+    ENV['SETTINGS__PAY__STRIPE__SIGNING_SECRET'] = 'foo'
   else
     config.schema do
       required(:app).schema do
@@ -80,6 +83,23 @@ Config.setup do |config|
           required(:password).filled(:string)
           required(:authentication).filled(:string)
           required(:enable_starttls_auto).filled(:bool)
+        end
+      end
+      required(:pay).schema do
+        required(:business).schema do
+          required(:name).filled(:string)
+          required(:address).filled(:string)
+        end
+        required(:default_processor).filled(:string)
+        unless Rails.env.test?
+          required(:stripe).schema do
+            required(:public_key).filled(:string)
+            required(:secret_key).filled(:string)
+            required(:signing_secret).filled(:string)
+            required(:subscription).schema do
+              required(:premium).filled(:string)
+            end
+          end
         end
       end
       required(:redis).schema do

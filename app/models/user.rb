@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :trackable, :confirmable,
          :omniauthable, omniauth_providers: Settings.sso.keys
 
+  pay_customer default_payment_processor: Settings.pay.default_processor
+
   has_many :consents, dependent: :delete_all
   has_many :identities, dependent: :delete_all
   has_many :ahoy_visits, class_name: 'Ahoy::Visit', dependent: :destroy

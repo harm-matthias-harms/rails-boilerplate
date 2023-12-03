@@ -2,3 +2,4 @@ web: unset PORT && bin/rails server
 worker: bundle exec good_job start
 js: yarn build --watch
 css: yarn build:css --watch
+stripe: stripe listen --forward-to localhost:3000/pay/webhooks/stripe

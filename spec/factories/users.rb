@@ -15,6 +15,12 @@ FactoryBot.define do
     trait :unconfirmed do
       confirmed_at { nil }
     end
+
+    trait :with_premium_subscription do
+      after :create do |user|
+        user.payment_processor.subscribe(name: :premium)
+      end
+    end
   end
 end
 

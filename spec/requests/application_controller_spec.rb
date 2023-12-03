@@ -9,6 +9,10 @@ class MockedController < ApplicationController
     raise ActionDispatch::Cookies::CookieOverflow
   end
 
+  def unauthorized
+    raise Pundit::NotAuthorizedError
+  end
+
   def random_action
     skip_authorization
     head :ok
@@ -29,8 +33,12 @@ RSpec.describe ApplicationController do
   describe 'rescues from' do
     before do
       Rails.application.routes.draw do
+        root to: 'mocked#random_action'
+        devise_for :users
+
         get '/unknown_format' => 'mocked#unknown_format'
         get '/cookie_overflow' => 'mocked#cookie_overflow'
+        get '/unauthorized' => 'mocked#unauthorized'
       end
     end
 
@@ -48,6 +56,21 @@ RSpec.describe ApplicationController do
       get '/cookie_overflow'
 
       expect(response).to have_http_status(:request_header_fields_too_large)
+    end
+
+    it 'rescues from Pundit::NotAuthorizedError', :aggregate_failures do
+      get '/unauthorized'
+
+      expect(response).to redirect_to(new_user_session_url)
+      expect(flash[:alert]).to eq('You need to sign in or sign up before continuing.')
+    end
+
+    it 'rescues from Pundit::NotAuthorizedError with current_user', :aggregate_failures do
+      sign_in create(:user)
+      get '/unauthorized'
+
+      expect(response).to redirect_to(root_url)
+      expect(flash[:alert]).to eq('You are not authorized to perform this action.')
     end
   end
 

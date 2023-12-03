@@ -46,3 +46,5 @@
   - showcase.with_description do
     Get started with our free templates and themes. Our themes are open source for any use, even commercial.
     Download what you like and get started!
+= render_component(Common::LinkComponent, href: new_subscription_path, button: :primary, data: { turbo: false }) do
+  Subscribe
