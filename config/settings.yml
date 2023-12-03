@@ -8,3 +8,4 @@ pay:
   business:
     name: "Rails Boilerplate"
     address: "123 Main St"
+  default_processor: stripe
