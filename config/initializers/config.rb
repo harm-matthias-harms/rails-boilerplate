@@ -90,12 +90,15 @@ Config.setup do |config|
           required(:name).filled(:string)
           required(:address).filled(:string)
         end
-        required(:stripe).schema do
-          required(:public_key).filled(:string)
-          required(:secret_key).filled(:string)
-          required(:signing_secret).filled(:string)
-          required(:subscription).schema do
-            required(:premium).filled(:string)
+        required(:default_processor).filled(:string)
+        unless Rails.env.test?
+          required(:stripe).schema do
+            required(:public_key).filled(:string)
+            required(:secret_key).filled(:string)
+            required(:signing_secret).filled(:string)
+            required(:subscription).schema do
+              required(:premium).filled(:string)
+            end
           end
         end
       end
