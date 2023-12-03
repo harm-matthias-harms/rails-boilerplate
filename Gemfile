@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '7.1.1'
+gem 'rails', '7.1.2'
 
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft', '0.8.0'
@@ -54,8 +54,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', '1.8.0', platforms: %i[mri mingw x64_mingw]
 
-  gem 'factory_bot_rails', '6.2.0'
-  gem 'rspec-rails', '6.0.3'
+  gem 'factory_bot_rails', '6.4.2'
+  gem 'rspec-rails', '6.1.0'
 end
 
 group :development do
@@ -69,18 +69,18 @@ group :development do
   # gem "spring"
 
   gem 'listen', '3.8.0'
-  gem 'lookbook', '2.1.1'
+  gem 'lookbook', '2.2.0'
 
   gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.0.1', require: false
   gem 'database_consistency', '1.7.22', require: false
   gem 'haml_lint', '0.51.0', require: false
   gem 'i18n-tasks', '1.0.13', require: false
-  gem 'rubocop', '1.57.2', require: false
+  gem 'rubocop', '1.58.0', require: false
   gem 'rubocop-capybara', '2.19.0', require: false
   gem 'rubocop-factory_bot', '2.24.0', require: false
   gem 'rubocop-performance', '1.19.1', require: false
-  gem 'rubocop-rails', '2.22.1', require: false
+  gem 'rubocop-rails', '2.22.2', require: false
   gem 'rubocop-rspec', '2.25.0', require: false
 end
 
@@ -97,13 +97,13 @@ group :test do
 end
 
 gem 'active_record_doctor', '1.12.0'
-gem 'active_storage_validations', '1.1.1'
+gem 'active_storage_validations', '1.1.3'
 gem 'ahoy_matey', '5.0.2'
-gem 'blazer', '3.0.1'
+gem 'blazer', '3.0.2'
 gem 'config', '5.0.0'
 gem 'devise', '4.9.3'
 gem 'goldiloader', '5.1.0'
-gem 'good_job', '3.21.0'
+gem 'good_job', '3.21.2'
 gem 'haml-rails', '2.1.0'
 gem 'omniauth', '2.1.1'
 gem 'omniauth-google-oauth2', '1.1.1'
@@ -117,4 +117,4 @@ gem 'service_actor', '3.7.0'
 gem 'service_actor-rails', '1.0.0'
 gem 'stripe', '9.4.0'
 gem 'valid_email2', '5.1.1'
-gem 'view_component', '3.7.0'
+gem 'view_component', '3.8.0'
