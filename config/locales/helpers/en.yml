@@ -28,6 +28,9 @@ en:
         default: all
       title:
         default: Rails Boilerplate
+    pundit:
+      not_authenticated: You need to sign in or sign up before continuing.
+      not_authorized: You are not authorized to perform this action.
     sso:
       disconnect: Disconnect %{provider}
       google_oauth2: Google
