@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 class SubscriptionsController < ApplicationController
+  def index
+    skip_policy_scope
+    authorize Pay::Subscription
+
+    redirect_to current_user.payment_processor.billing_portal.url, status: :see_other, allow_other_host: true
+  end
+
   def new
-    skip_authorization # authorize Pay::Subscription
+    authorize Pay::Subscription
 
     # Todo add more checkout options to prevent refunds, like tos, etc.
     @checkout_session = current_user.payment_processor.checkout(
