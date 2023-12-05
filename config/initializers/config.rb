@@ -86,10 +86,6 @@ Config.setup do |config|
         end
       end
       required(:pay).schema do
-        required(:business).schema do
-          required(:name).filled(:string)
-          required(:address).filled(:string)
-        end
         required(:default_processor).filled(:string)
         unless Rails.env.test?
           required(:stripe).schema do
