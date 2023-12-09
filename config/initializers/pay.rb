@@ -19,6 +19,4 @@ end
 Pay.setup do |config|
   config.automount_routes = true
   config.enabled_processors = [Settings.pay.default_processor.to_sym]
-
-  config.send_emails = false
 end
