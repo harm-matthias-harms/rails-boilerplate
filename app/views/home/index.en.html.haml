@@ -7,7 +7,7 @@
     Build your next app faster with our open source templates and themes.
     Our themes are open source for any use, even commercial.
     Download what you like and get started!
-= render_component(Common::ShowcaseComponent) do |showcase|
+= render_component(Common::ShowcaseComponent, rtl: true) do |showcase|
   :ruby
     showcase.with_heading { 'Find the right solution for you' }
     showcase.with_list do |list|
@@ -33,7 +33,7 @@
     showcase.with_image(src: 'https://picsum.photos/500/301', alt: 'Random photo', width: 500, height: 301)
   - showcase.with_description do
     Deploy your app in seconds with our open source templates and themes. We support all major cloud providers.
-= render_component(Common::ShowcaseComponent) do |showcase|
+= render_component(Common::ShowcaseComponent, rtl: true) do |showcase|
   :ruby
     showcase.with_heading { 'Get started with our free templates' }
     showcase.with_list do |list|
