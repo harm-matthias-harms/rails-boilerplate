@@ -22,5 +22,18 @@ RSpec.describe Common::ShowcaseComponent, type: :component do
     it { is_expected.to have_css('p', text: 'Description') }
     it { is_expected.to have_css('img[src="https://picsum.photos/200/300"][alt="Image"]') }
     it { is_expected.to have_css('ul li', count: 3) }
+
+    context 'with block instead of image' do
+      subject do
+        render_inline(showcase_component) do |showcase|
+          showcase.with_image(src: 'https://picsum.photos/200/300', alt: 'Image') do
+            'This is a block instead of an image.'
+          end
+        end
+      end
+
+      it { is_expected.to have_text('This is a block instead of an image.') }
+      it { is_expected.not_to have_css('img') }
+    end
   end
 end

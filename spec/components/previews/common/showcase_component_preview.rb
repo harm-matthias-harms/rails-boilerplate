@@ -28,5 +28,15 @@ class Common::ShowcaseComponentPreview < ViewComponent::Preview
     end
   end
 
+  def with_block_instead_of_image
+    render(Common::ShowcaseComponent.new) do |showcase|
+      showcase.with_heading { 'Best in class' }
+      showcase.with_description { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
+      showcase.with_image do
+        'This is a block instead of an image.'
+      end
+    end
+  end
+
   # @!endgroup
 end
