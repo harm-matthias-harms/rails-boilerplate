@@ -46,5 +46,29 @@
   - showcase.with_description do
     Get started with our free templates and themes. Our themes are open source for any use, even commercial.
     Download what you like and get started!
-= render_component(Common::LinkComponent, href: new_subscription_path, button: :primary, data: { turbo: false }) do
-  Subscribe
+= render_component(Common::ShowcaseComponent, rtl: true) do |showcase|
+  :ruby
+    showcase.with_heading { 'Premium Membership' }
+    showcase.with_list do |list|
+       list.with_item { 'Lorem ipsum dolor sit amet consectetur adipisicing elit' }
+       list.with_item { 'Lorem ipsum dolor' }
+       list.with_item { 'Lorem ipsum dolor sit amet' }
+       list.with_item { 'Lorem ipsum adipisicing elit' }
+     end
+  - showcase.with_image do
+    = render_component(Common::CardComponent) do |card|
+      - card.with_heading { 'Premium' }
+      .text-primary.text-2xl.font-bold.mb-4
+        = '$9.99'
+        .text-base.text-gray-500
+          = '/month'
+      :ruby
+        card.with_list do |list|
+          list.with_item { 'Fast support' }
+          list.with_item { 'Unlimited downloads' }
+          list.with_item { 'Unlimited projects' }
+          list.with_item { 'Unlimited users' }
+        end
+        card.with_action(href: new_subscription_path, data: { turbo: false }) { 'Subscribe' }
+  - showcase.with_description do
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
