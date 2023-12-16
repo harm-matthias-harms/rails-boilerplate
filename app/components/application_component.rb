@@ -12,7 +12,7 @@ class ApplicationComponent < ViewComponent::Base
 
   def initialize(**kwargs)
     super
-    kwargs.each { |name, value| instance_variable_set("@#{name}", value) }
+    kwargs.each { |name, value| instance_variable_set(:"@#{name}", value) }
   end
 
   def policy(record, policy_class: nil)
