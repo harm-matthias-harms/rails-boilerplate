@@ -6,7 +6,7 @@ module TailwindFormBuilder::Input
 
   %i[text_field number_field email_field password_field phone_field date_field
      datetime_field].each do |method|
-       define_method("labeled_#{method}") do |attribute, options = {}|
+       define_method(:"labeled_#{method}") do |attribute, options = {}|
          labeled_input(method, attribute, options)
        end
      end
