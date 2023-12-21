@@ -46,7 +46,7 @@
   - showcase.with_description do
     Get started with our free templates and themes. Our themes are open source for any use, even commercial.
     Download what you like and get started!
-= render_component(Common::ShowcaseComponent, rtl: true) do |showcase|
+= render_component(Common::ShowcaseComponent, rtl: true, content_first: true) do |showcase|
   :ruby
     showcase.with_heading { 'Premium Membership' }
     showcase.with_list do |list|
@@ -71,4 +71,5 @@
         end
         card.with_action(href: new_subscription_path, data: { turbo: false }) { 'Subscribe' }
   - showcase.with_description do
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.

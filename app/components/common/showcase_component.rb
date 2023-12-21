@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Common::ShowcaseComponent < ApplicationComponent
-  attr_reader :rtl
+  attr_reader :rtl, :content_first
 
   renders_one :heading, -> { Common::HeadingComponent.new(tag: :h2) }
   renders_one :description, 'Common::ParagraphComponent'
@@ -11,4 +11,5 @@ class Common::ShowcaseComponent < ApplicationComponent
   }
 
   alias rtl? rtl
+  alias content_first? content_first
 end
