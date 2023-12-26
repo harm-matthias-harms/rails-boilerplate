@@ -2,6 +2,7 @@
 
 class Pay::CreateCheckout < Actor
   input :user, type: User
+  input :trial, type: String, allow_nil: true, default: nil
   input :success_url, type: String
   input :cancel_url, type: String
 
@@ -31,9 +32,14 @@ class Pay::CreateCheckout < Actor
 
   def subscription_data
     {
+      trial_period_days: trial? ? 14 : nil,
       metadata: {
         pay_name: :premium
       }
     }
+  end
+
+  def trial?
+    ActiveModel::Type::Boolean.new.cast(trial)
   end
 end

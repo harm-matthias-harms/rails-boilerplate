@@ -11,9 +11,8 @@ class SubscriptionsController < ApplicationController
   def new
     authorize Pay::Subscription
 
-    @checkout = Pay::CreateCheckout.result(user: current_user,
-                                           success_url: root_url,
-                                           cancel_url: request.referer || root_url)
+    @checkout = Pay::CreateCheckout.result(user: current_user, trial: params[:trial],
+                                           success_url: root_url, cancel_url: request.referer || root_url)
     if @checkout.success?
       redirect_to @checkout.checkout_session.url, status: :see_other, allow_other_host: true
     else
