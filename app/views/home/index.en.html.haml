@@ -1,8 +1,8 @@
 = render_component(Common::HeroComponent) do |hero|
-  :ruby
-    hero.with_heading { 'Build your next app faster' }
-    hero.with_image(src: 'https://picsum.photos/500/600', alt: 'Random photo', width: 500, height: 600)
-    hero.with_action(button: :primary, href: new_user_registration_path) { 'Get Started' }
+  - hero.with_heading { 'Build your next app faster' }
+  - hero.with_image(src: 'https://picsum.photos/500/600', alt: 'Random photo', width: 500, height: 600)
+  - hero.with_action(button: :primary, href: new_subscription_path(trial: true), data: { turbo: false }) do
+    Try for free
   - hero.with_paragraph do
     Build your next app faster with our open source templates and themes.
     Our themes are open source for any use, even commercial.
