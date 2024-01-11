@@ -24,7 +24,7 @@ RSpec.describe Common::ListComponent, type: :component do
         end
       end
 
-      it { is_expected.not_to have_css('ul.list-disc') }
+      it { is_expected.to have_no_css('ul.list-disc') }
       it { is_expected.to have_css('li', text: 'Item', count: 3) }
       it { is_expected.to have_css('li > i.fas.fa-check', count: 3) }
     end
