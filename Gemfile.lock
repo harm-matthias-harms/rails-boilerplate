@@ -230,8 +230,8 @@ GEM
       activesupport (>= 5.1)
       haml (>= 4.0.6)
       railties (>= 5.1)
-    haml_lint (0.52.0)
-      haml (>= 4.0)
+    haml_lint (0.53.0)
+      haml (>= 5.0)
       parallel (~> 1.10)
       rainbow
       rubocop (>= 1.0)
@@ -339,7 +339,7 @@ GEM
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
     parallel (1.24.0)
-    parser (3.3.0.1)
+    parser (3.3.0.2)
       ast (~> 2.4.1)
       racc
     pay (7.1.0)
@@ -417,7 +417,7 @@ GEM
       redis-client (>= 0.17.0)
     redis-client (0.19.1)
       connection_pool
-    regexp_parser (2.8.3)
+    regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
     responders (3.1.1)
@@ -571,7 +571,7 @@ DEPENDENCIES
   goldiloader (= 5.2.0)
   good_job (= 3.22.0)
   haml-rails (= 2.1.0)
-  haml_lint (= 0.52.0)
+  haml_lint (= 0.53.0)
   i18n-tasks (= 1.0.13)
   jsbundling-rails (= 1.2.1)
   listen (= 3.8.0)
