@@ -6,9 +6,11 @@ RSpec.describe 'Sign in' do
   before do
     visit root_path
     click_link_or_button 'Log in'
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-    click_link_or_button 'Log in'
+    within '#new_user' do
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: user.password
+      click_link_or_button 'Log in'
+    end
   end
 
   it { expect(page).to have_content 'Signed in successfully.' }
