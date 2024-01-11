@@ -33,7 +33,7 @@ RSpec.describe Common::ShowcaseComponent, type: :component do
       end
 
       it { is_expected.to have_text('This is a block instead of an image.') }
-      it { is_expected.not_to have_css('img') }
+      it { is_expected.to have_no_css('img') }
     end
   end
 end

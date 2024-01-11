@@ -5,12 +5,14 @@ RSpec.describe 'Sign up' do
 
   before do
     visit root_path
-    click_link 'Sign up'
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-    fill_in 'Password confirmation', with: user.password
-    check 'I accept the'
-    click_button 'Sign up'
+    click_link_or_button 'Sign up'
+    within '#new_user' do
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: user.password
+      fill_in 'Password confirmation', with: user.password
+      check 'I accept the'
+      click_link_or_button 'Sign up'
+    end
   end
 
   it 'creates user and shows welcome message', :aggregate_failures, :js do
