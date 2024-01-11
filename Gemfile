@@ -77,7 +77,7 @@ group :development do
   gem 'haml_lint', '0.53.0', require: false
   gem 'i18n-tasks', '1.0.13', require: false
   gem 'rubocop', '1.59.0', require: false
-  gem 'rubocop-capybara', '2.19.0', require: false
+  gem 'rubocop-capybara', '2.20.0', require: false
   gem 'rubocop-factory_bot', '2.25.1', require: false
   gem 'rubocop-performance', '1.20.1', require: false
   gem 'rubocop-rails', '2.23.1', require: false
