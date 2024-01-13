@@ -291,18 +291,18 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
-    minitest (5.20.0)
+    minitest (5.21.1)
     msgpack (1.7.2)
     multi_xml (0.6.0)
     mutex_m (0.2.0)
-    net-imap (0.4.9)
+    net-imap (0.4.9.1)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-smtp (0.4.0)
+    net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
     nokogiri (1.16.0-aarch64-linux)
@@ -344,7 +344,7 @@ GEM
     parser (3.3.0.2)
       ast (~> 2.4.1)
       racc
-    pay (7.1.0)
+    pay (7.1.1)
       rails (>= 6.0.0)
     pg (1.5.4)
     propshaft (0.8.0)
@@ -581,7 +581,7 @@ DEPENDENCIES
   omniauth (= 2.1.2)
   omniauth-google-oauth2 (= 1.1.1)
   omniauth-rails_csrf_protection (= 1.0.1)
-  pay (= 7.1.0)
+  pay (= 7.1.1)
   pg (= 1.5.4)
   propshaft (= 0.8.0)
   puma (= 6.4.2)
