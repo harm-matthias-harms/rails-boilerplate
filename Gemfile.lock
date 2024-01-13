@@ -109,7 +109,7 @@ GEM
       csv
       railties (>= 6.1)
       safely_block (>= 0.4)
-    bootsnap (1.17.0)
+    bootsnap (1.17.1)
       msgpack (~> 1.2)
     brakeman (6.1.1)
       racc
@@ -558,7 +558,7 @@ DEPENDENCIES
   ahoy_matey (= 5.0.2)
   annotate (= 3.2.0)
   blazer (= 3.0.3)
-  bootsnap (= 1.17.0)
+  bootsnap (= 1.17.1)
   brakeman (= 6.1.1)
   capybara (= 3.39.2)
   config (= 5.1.0)
