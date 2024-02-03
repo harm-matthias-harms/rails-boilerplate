@@ -11,10 +11,10 @@ pre-commit:
       run: bundle exec haml-lint {staged_files}
     lint js:
       glob: "*.js"
-      run: yarn lint {staged_files}
+      run: bun run lint {staged_files}
     lint css:
       glob: "*.pcss"
-      run: yarn lint:css {stages_files}
+      run: bun run lint:css {stages_files}
     i18n tasks:
       glob: "{app,config/locales}/**/*.{haml,rb,yml}"
       run: bundle exec i18n-tasks health
@@ -30,7 +30,7 @@ post-checkout: &post-checkoout
       run: git pull
     bundle install:
       run: bundle install
-    yarn install:
-      run: yarn install
+    bun install:
+      run: bun install
 post-merge: *post-checkoout
 post-rewrite: *post-checkoout

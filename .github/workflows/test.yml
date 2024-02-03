@@ -22,15 +22,12 @@ jobs:
         with:
           ruby-version: '.tool-versions'
           bundler-cache: true
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.tool-versions'
-          cache: yarn
-      - run: yarn install --frozen-lockfile
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install --frozen-lockfile
       - run: bin/rails db:prepare
         env:
           SETTINGS_SKIP_VALIDATION: true
-      - run: bin/rails assets:precompile
+      - run: bin/rails spec:prepare
         env:
           SETTINGS_SKIP_VALIDATION: true
       - run: bundle exec rspec
