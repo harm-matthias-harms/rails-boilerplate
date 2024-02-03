@@ -38,6 +38,6 @@ jobs:
           SETTINGS_PAY_STRIPE_PUBLIC_KEY: ${{ secrets.SETTINGS_PAY_STRIPE_PUBLIC_KEY }}
           SETTINGS_PAY_STRIPE_SECRET_KEY: ${{ secrets.SETTINGS_PAY_STRIPE_SECRET_KEY }}
           SETTINGS_PAY_STRIPE_SUBSCRIPTION_PREMIUM: ${{ secrets.SETTINGS_PAY_STRIPE_SUBSCRIPTION_PREMIUM }}
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
