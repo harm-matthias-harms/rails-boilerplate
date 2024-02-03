@@ -27,7 +27,7 @@ jobs:
       - run: bin/rails db:prepare
         env:
           SETTINGS_SKIP_VALIDATION: true
-      - run: bin/rails assets:precompile
+      - run: bin/rails spec:prepare
         env:
           SETTINGS_SKIP_VALIDATION: true
       - run: ls app/assets/builds
