@@ -30,6 +30,7 @@ jobs:
       - run: bin/rails assets:precompile
         env:
           SETTINGS_SKIP_VALIDATION: true
+      - run: ls app/assets/builds
       - run: bundle exec rspec
         env:
           SETTINGS_PAY_STRIPE_PUBLIC_KEY: ${{ secrets.SETTINGS_PAY_STRIPE_PUBLIC_KEY }}
