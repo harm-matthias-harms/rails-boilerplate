@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
   redis:
-    image: redis:7.2.1-alpine3.18
+    image: redis:7.2.3-alpine3.18
     ports:
       - "6379:6379"
     command: redis-server --save 60 1 --loglevel warning
