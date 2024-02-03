@@ -15,7 +15,7 @@
     "@hotwired/turbo-rails": "7.3.0",
     "@tailwindcss/typography": "0.5.10",
     "autoprefixer": "10.4.17",
-    "daisyui": "4.6.0",
+    "daisyui": "4.6.1",
     "esbuild": "0.19.12",
     "postcss": "8.4.33",
     "sass": "1.70.0",
