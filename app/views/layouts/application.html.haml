@@ -8,6 +8,7 @@
     %meta{ name: 'keywords', content: content_for(:keywords) || page_keywords }
     %meta{ name: 'robots', content: content_for(:robots) || page_robots }
     %meta{ content: 'width=device-width,initial-scale=1', name: 'viewport' }
+    %meta{ name: 'turbo-refresh-method', content: 'morph' }
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
