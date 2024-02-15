@@ -74,7 +74,7 @@ group :development do
   gem 'annotate', '3.2.0', require: false
   gem 'brakeman', '6.1.2', require: false
   gem 'database_consistency', '1.7.23', require: false
-  gem 'haml_lint', '0.56.0', require: false
+  gem 'haml_lint', '0.57.0', require: false
   gem 'i18n-tasks', '1.0.13', require: false
   gem 'rubocop', '1.60.2', require: false
   gem 'rubocop-capybara', '2.20.0', require: false
