@@ -68,7 +68,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  gem 'listen', '3.8.0'
+  gem 'listen', '3.9.0'
   gem 'lookbook', '2.2.1'
 
   gem 'annotate', '3.2.0', require: false
