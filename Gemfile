@@ -12,7 +12,7 @@ gem 'rails', '7.1.3.2'
 gem 'propshaft', '0.8.0'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '1.5.5'
+gem 'pg', '1.5.6'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '6.4.2'
