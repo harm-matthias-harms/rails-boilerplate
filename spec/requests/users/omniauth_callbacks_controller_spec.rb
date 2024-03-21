@@ -43,7 +43,7 @@ RSpec.describe Users::OmniauthCallbacksController do
 
       context 'with failing actor' do
         before do
-          mock_actor(User::SingleSignOn, result: {}, success: false)
+          mock_actor(User::SingleSignOn, success: false)
           get "/users/auth/#{provider}/callback"
         end
 
@@ -53,7 +53,7 @@ RSpec.describe Users::OmniauthCallbacksController do
 
       context 'with failing actor when user is signed in' do
         before do
-          mock_actor(User::SingleSignOn, result: {}, success: false)
+          mock_actor(User::SingleSignOn, success: false)
           sign_in create(:user, email:)
           get "/users/auth/#{provider}/callback"
         end
