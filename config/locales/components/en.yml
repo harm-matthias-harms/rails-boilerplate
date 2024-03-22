@@ -3,6 +3,9 @@ en:
   layout:
     footer_component:
       copyright: Copyright © 2023 - All right reserved
+      imprint: Imprint
+      privacy_policy: Privacy
+      terms_of_service: Terms
     navbar_component:
       billing_portal: Billing portal
       settings: Settings

@@ -1,3 +1,10 @@
 %footer.footer.items-center.p-4.bg-base-200
-  %p
-    = t('.copyright')
+  .flex.justify-between.w-full
+    %p
+      = t('.copyright', current_year: Time.current.year)
+    %div
+      = render_component(Common::LinkComponent, link: true, href: imprint_path) { t('.imprint') }
+      \|
+      = render_component(Common::LinkComponent, link: true, href: terms_of_service_path) { t('.terms_of_service') }
+      \|
+      = render_component(Common::LinkComponent, link: true, href: privacy_policy_path) { t('.privacy_policy') }
