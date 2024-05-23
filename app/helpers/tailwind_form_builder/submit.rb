@@ -7,7 +7,7 @@ module TailwindFormBuilder::Submit
     option[:class] = ['btn btn-primary btn-full']
 
     form_control do
-      [required_submit_label, super(value, option)].join.html_safe # rubocop:disable Rails/OutputSafety
+      [required_submit_label, super].join.html_safe # rubocop:disable Rails/OutputSafety
     end
   end
 
