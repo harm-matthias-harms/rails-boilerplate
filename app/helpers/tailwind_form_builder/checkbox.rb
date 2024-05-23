@@ -20,6 +20,6 @@ module TailwindFormBuilder::Checkbox
     options[:required] = required?(attribute)
     options[:aria] = { required: required?(attribute) }
 
-    super(attribute, options)
+    super
   end
 end
