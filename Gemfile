@@ -78,7 +78,7 @@ group :development do
   gem 'i18n-tasks', '1.0.14', require: false
   gem 'rubocop', '1.64.1', require: false
   gem 'rubocop-capybara', '2.20.0', require: false
-  gem 'rubocop-factory_bot', '2.25.1', require: false
+  gem 'rubocop-factory_bot', '2.26.0', require: false
   gem 'rubocop-performance', '1.21.0', require: false
   gem 'rubocop-rails', '2.25.0', require: false
   gem 'rubocop-rspec', '2.31.0', require: false
