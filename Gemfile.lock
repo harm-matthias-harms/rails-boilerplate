@@ -524,7 +524,7 @@ GEM
       activemodel (>= 3.2)
       mail (~> 2.5)
     version_gem (1.1.4)
-    view_component (3.12.1)
+    view_component (3.13.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -610,7 +610,7 @@ DEPENDENCIES
   turbo-rails (= 2.0.5)
   tzinfo-data (= 1.2024.1)
   valid_email2 (= 5.2.4)
-  view_component (= 3.12.1)
+  view_component (= 3.13.0)
   web-console (= 4.2.1)
 
 RUBY VERSION
