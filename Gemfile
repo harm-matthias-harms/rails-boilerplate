@@ -90,7 +90,7 @@ group :test do
   gem 'database_cleaner-active_record', '2.2.0'
   gem 'faker', '3.4.2'
   gem 'fuubar', '2.5.1', require: false
-  gem 'selenium-webdriver', '4.22.0'
+  gem 'selenium-webdriver', '4.23.0'
   gem 'shoulda-matchers', '6.2.0', require: false
   gem 'simplecov', '0.22.0', require: false
   gem 'simplecov-cobertura', '2.1.0'
