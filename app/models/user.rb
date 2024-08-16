@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :encrypted_password, :sign_in_count, presence: true
   validates :email, presence: true, 'valid_email_2/email': { disposable: true }
 
-  enum role: { user: 0, admin: 1 }, _default: :user
+  enum :role, { user: 0, admin: 1 }, default: :user
 
   accepts_nested_attributes_for :consents
 

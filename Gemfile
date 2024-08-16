@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.3.4'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '7.1.3.4'
+gem 'rails', '7.2.0'
 
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft', '0.9.1'
@@ -82,6 +82,7 @@ group :development do
   gem 'rubocop-performance', '1.21.1', require: false
   gem 'rubocop-rails', '2.25.1', require: false
   gem 'rubocop-rspec', '3.0.4', require: false
+  gem 'rubocop-rspec_rails', '2.30.0', require: false
 end
 
 group :test do
