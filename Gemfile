@@ -92,7 +92,7 @@ group :test do
   gem 'faker', '3.4.2'
   gem 'fuubar', '2.5.1', require: false
   gem 'selenium-webdriver', '4.23.0'
-  gem 'shoulda-matchers', '6.3.1', require: false
+  gem 'shoulda-matchers', '6.4.0', require: false
   gem 'simplecov', '0.22.0', require: false
   gem 'simplecov-cobertura', '2.1.0'
 end
