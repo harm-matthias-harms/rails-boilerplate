@@ -97,7 +97,7 @@ group :test do
   gem 'simplecov-cobertura', '2.1.0'
 end
 
-gem 'active_record_doctor', '1.14.0'
+gem 'active_record_doctor', '1.15.0'
 gem 'active_storage_validations', '1.1.4'
 gem 'ahoy_matey', '5.1.0'
 gem 'blazer', '3.0.3'

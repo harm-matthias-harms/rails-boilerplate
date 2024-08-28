@@ -45,7 +45,7 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    active_record_doctor (1.14.0)
+    active_record_doctor (1.15.0)
       activerecord (>= 4.2.0)
     active_storage_validations (1.1.4)
       activejob (>= 5.2.0)
@@ -556,7 +556,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  active_record_doctor (= 1.14.0)
+  active_record_doctor (= 1.15.0)
   active_storage_validations (= 1.1.4)
   ahoy_matey (= 5.1.0)
   annotate (= 3.2.0)
