@@ -15,7 +15,7 @@ gem 'propshaft', '1.0.0'
 gem 'pg', '1.5.8'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '6.4.2'
+gem 'puma', '6.4.3'
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails', '1.3.1'
