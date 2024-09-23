@@ -47,7 +47,7 @@ GEM
       rails-html-sanitizer (~> 1.6)
     active_record_doctor (1.15.0)
       activerecord (>= 4.2.0)
-    active_storage_validations (1.1.4)
+    active_storage_validations (1.2.0)
       activejob (>= 5.2.0)
       activemodel (>= 5.2.0)
       activestorage (>= 5.2.0)
@@ -555,7 +555,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_record_doctor (= 1.15.0)
-  active_storage_validations (= 1.1.4)
+  active_storage_validations (= 1.2.0)
   ahoy_matey (= 5.2.0)
   annotate (= 3.2.0)
   blazer (= 3.0.4)
