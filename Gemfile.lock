@@ -80,7 +80,7 @@ GEM
       tzinfo (~> 2.0, >= 2.0.5)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    ahoy_matey (5.2.0)
+    ahoy_matey (5.2.1)
       activesupport (>= 6.1)
       device_detector (>= 1)
       safely_block (>= 0.4)
@@ -557,7 +557,7 @@ PLATFORMS
 DEPENDENCIES
   active_record_doctor (= 1.15.0)
   active_storage_validations (= 1.2.0)
-  ahoy_matey (= 5.2.0)
+  ahoy_matey (= 5.2.1)
   annotate (= 3.2.0)
   blazer (= 3.0.4)
   bootsnap (= 1.18.4)
