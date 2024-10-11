@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ActiveRecordDoctor.configure do
+ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
   global :ignore_tables, [
     # Ignore internal Rails-related tables.
     'ar_internal_metadata',
@@ -53,6 +53,12 @@ ActiveRecordDoctor.configure do
            ignore_models: [
              'Blazer::Query',
              'Blazer::Dashboard',
-             'Pay::Customer'
+             'Pay::Customer',
+             'Pay::Braintree::Customer',
+             'Pay::FakeProcessor::Customer',
+             'Pay::LemonSqueezy::Customer',
+             'Pay::PaddleBilling::Customer',
+             'Pay::PaddleClassic::Customer',
+             'Pay::Stripe::Customer'
            ]
 end
