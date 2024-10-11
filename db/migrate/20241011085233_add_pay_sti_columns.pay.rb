@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This migration comes from pay (originally 2)
 class AddPayStiColumns < ActiveRecord::Migration[6.0]
   def change
@@ -13,9 +15,9 @@ class AddPayStiColumns < ActiveRecord::Migration[6.0]
     Pay::Customer.find_each do |pay_customer|
       pay_customer.update(type: "Pay::#{pay_customer.processor.classify}::Customer")
 
-      pay_customer.charges.update_all(type: "Pay::#{pay_customer.processor.classify}::Charge")
-      pay_customer.subscriptions.update_all(type: "Pay::#{pay_customer.processor.classify}::Subscription")
-      pay_customer.payment_methods.update_all(type: "Pay::#{pay_customer.processor.classify}::PaymentMethod")
+      pay_customer.charges.update_all(type: "Pay::#{pay_customer.processor.classify}::Charge") # rubocop:disable Rails/SkipsModelValidations
+      pay_customer.subscriptions.update_all(type: "Pay::#{pay_customer.processor.classify}::Subscription") # rubocop:disable Rails/SkipsModelValidations
+      pay_customer.payment_methods.update_all(type: "Pay::#{pay_customer.processor.classify}::PaymentMethod") # rubocop:disable Rails/SkipsModelValidations
     end
 
     Pay::Merchant.find_each do |pay_merchant|
