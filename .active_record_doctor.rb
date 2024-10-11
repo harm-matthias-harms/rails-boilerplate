@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ActiveRecordDoctor.configure do
+ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
   global :ignore_tables, [
     # Ignore internal Rails-related tables.
     'ar_internal_metadata',
