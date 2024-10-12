@@ -5,7 +5,8 @@ import Bun from 'bun'
 const config = {
   sourcemap: 'external',
   entrypoints: ['app/javascript/application.js'],
-  outdir: path.join(process.cwd(), 'app/assets/builds')
+  outdir: path.join(process.cwd(), 'app/assets/builds'),
+  minify: true
 }
 
 const build = async (config) => {
