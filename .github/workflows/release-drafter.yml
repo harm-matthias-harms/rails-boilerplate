@@ -18,11 +18,11 @@ jobs:
     steps:
       - name: Calendar Version
         id: calendar-version
-        uses: harm-matthias-harms/calendar-version@v0
+        uses: harm-matthias-harms/calendar-version@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: release-drafter/release-drafter@v6
         with:
-          tag: ${{ steps.calendar-version.outputs.new_tag }}
+          tag: ${{ steps.calendar-version.outputs.new-tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
