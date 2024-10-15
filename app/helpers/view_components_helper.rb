@@ -5,7 +5,7 @@ module ViewComponentsHelper
     render(klass.new(*, **), &)
   end
 
-  def render_component_collection(klass, *, **, &)
-    render(klass.with_collection(*, **, &))
+  def render_component_collection(klass, ...)
+    render(klass.with_collection(...))
   end
 end
