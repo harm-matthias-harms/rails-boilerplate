@@ -72,7 +72,7 @@ group :development do
   gem 'lookbook', '2.3.2'
 
   gem 'annotate', '3.2.0', require: false
-  gem 'brakeman', '6.2.1', require: false
+  gem 'brakeman', '6.2.2', require: false
   gem 'database_consistency', '1.7.26', require: false
   gem 'haml_lint', '0.59.0', require: false
   gem 'i18n-tasks', '1.0.14', require: false
