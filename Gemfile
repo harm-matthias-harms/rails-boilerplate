@@ -89,7 +89,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara', '3.40.0'
   gem 'database_cleaner-active_record', '2.2.0'
-  gem 'faker', '3.4.2'
+  gem 'faker', '3.5.1'
   gem 'fuubar', '2.5.1', require: false
   gem 'selenium-webdriver', '4.25.0'
   gem 'shoulda-matchers', '6.4.0', require: false
