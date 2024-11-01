@@ -13,6 +13,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - db/schema.rb
+    - db/cache_schema.rb
     - node_modules/**/*
     - bin/**/*
     - vendor/**/*

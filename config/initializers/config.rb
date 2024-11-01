@@ -68,10 +68,18 @@ Config.setup do |config|
         required(:host).filled(:string)
       end
       required(:database).schema do
-        required(:host).filled(:string)
-        required(:port).filled(:integer)
-        required(:username).filled(:string)
-        required(:password).filled(:string)
+        required(:primary).schema do
+          required(:host).filled(:string)
+          required(:port).filled(:integer)
+          required(:username).filled(:string)
+          required(:password).filled(:string)
+        end
+        required(:cache).schema do
+          required(:host).filled(:string)
+          required(:port).filled(:integer)
+          required(:username).filled(:string)
+          required(:password).filled(:string)
+        end
       end
       required(:mail).schema do
         required(:sender).filled(:string)

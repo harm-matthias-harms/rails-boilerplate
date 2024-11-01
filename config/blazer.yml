@@ -2,7 +2,7 @@
 
 data_sources:
   main:
-    url: "postgres://<%= Settings.database.username %>:<%= Settings.database.password %>@<%= Settings.database.host %>:<%= Settings.database.port %>/<%= Settings.app.name %>_<%= Rails.env %>"
+    url: "postgres://<%= Settings.database.primary.username %>:<%= Settings.database.primary.password %>@<%= Settings.database.primary.host %>:<%= Settings.database.primary.port %>/<%= Settings.app.name %>_<%= Rails.env %>"
 
     # statement timeout, in seconds
     # none by default
@@ -60,7 +60,6 @@ check_schedules:
   - "1 day"
   - "1 hour"
   - "5 minutes"
-
 # enable anomaly detection
 # note: with trend, time series are sent to https://trendapi.org
 # anomaly_checks: prophet / trend / anomaly_detection

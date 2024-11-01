@@ -1,7 +1,13 @@
 database:
-  host:
-  port: 5432
-  username:
-  password:
+  primary:
+    host:
+    port: 5432
+    username:
+    password:
+  cache:
+    host:
+    port: 5432
+    username:
+    password:
 redis:
   url:

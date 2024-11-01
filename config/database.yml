@@ -1,20 +1,38 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= Settings.database.host %>
-  port: <%= Settings.database.port %>
-  username: <%= Settings.database.username %>
-  password: <%= Settings.database.password %>
+  host: <%= Settings.database.primary.host %>
+  port: <%= Settings.database.primary.port %>
+  username: <%= Settings.database.primary.username %>
+  password: <%= Settings.database.primary.password %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+cache: &cache
+  adapter: postgresql
+  encoding: unicode
+  host: <%= Settings.database.cache.host %>
+  port: <%= Settings.database.cache.port %>
+  username: <%= Settings.database.cache.username %>
+  password: <%= Settings.database.cache.password %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: <%= "#{Settings.app.name}_development" %>
+  primary:
+    <<: *default
+    database: <%= "#{Settings.app.name}_development" %>
+  cache:
+    <<: *cache
+    database: cache_development
 
 test:
-  <<: *default
-  database: <%= "#{Settings.app.name}_test" %>
+  primary:
+    <<: *default
+    database: <%= "#{Settings.app.name}_test" %>
 
 production:
-  <<: *default
-  database: <%= "#{Settings.app.name}_production" %>
+  primary:
+    <<: *default
+    database: <%= "#{Settings.app.name}_production" %>
+  cache:
+    <<: *cache
+    database: cache_production
