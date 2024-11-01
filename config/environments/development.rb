@@ -30,7 +30,7 @@ Rails.application.configure do # rubocop:disable Metrics/BlockLength
   else
     config.action_controller.perform_caching = false
 
-    config.cache_store = :redis_cache_store, { url: Settings.redis.url, expires_in: 10.days }
+    config.cache_store = :solid_cache_store
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).

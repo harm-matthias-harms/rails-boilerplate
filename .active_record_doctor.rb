@@ -8,6 +8,7 @@ ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
     'active_storage_blobs',
     'active_storage_attachments',
     'action_text_rich_texts',
+    'solid_cache_entries',
     'good_jobs',
     'good_job_executions',
     'ahoy_events',
@@ -23,6 +24,10 @@ ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
     'pay_subscriptions',
     'pay_charges',
     'pay_webhooks'
+  ]
+
+  global :ignore_models, [
+    'SolidCache::Entry'
   ]
 
   detector :undefined_table_references,

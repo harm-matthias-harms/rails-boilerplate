@@ -1,8 +1,14 @@
 database:
-  host: localhost
-  port: 5432
-  username: postgres
-  password: postgres
+  primary:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: postgres
+  cache:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: postgres
 pay:
   default_processor: fake_processor
 redis:
