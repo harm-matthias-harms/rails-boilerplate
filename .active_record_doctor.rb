@@ -9,6 +9,7 @@ ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
     'active_storage_attachments',
     'action_text_rich_texts',
     'solid_cache_entries',
+    'solid_cable_messages',
     'good_jobs',
     'good_job_executions',
     'ahoy_events',
@@ -27,7 +28,8 @@ ActiveRecordDoctor.configure do # rubocop:todo Metrics/BlockLength
   ]
 
   global :ignore_models, [
-    'SolidCache::Entry'
+    'SolidCache::Entry',
+    'SolidCable::Message'
   ]
 
   detector :undefined_table_references,

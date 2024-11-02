@@ -33,7 +33,7 @@ gem 'cssbundling-rails', '1.4.1'
 # gem "jbuilder", "2.11.5"
 
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '5.3.0'
+# gem 'redis', '5.3.0'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -116,6 +116,7 @@ gem 'rails-healthcheck', '1.4.0'
 gem 'redcarpet', '3.6.0'
 gem 'service_actor', '3.9.4'
 gem 'service_actor-rails', '1.0.0'
+gem 'solid_cable', '3.0.2'
 gem 'solid_cache', '1.0.6'
 gem 'stripe', '13.1.0'
 gem 'thruster', '0.1.8'
