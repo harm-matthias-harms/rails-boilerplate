@@ -13,6 +13,7 @@ cache: &cache
   port: <%= Settings.database.cache.port %>
   username: <%= Settings.database.cache.username %>
   password: <%= Settings.database.cache.password %>
+  migrations_paths: db/cache_migrate
 
 cable: &cable
   <<: *default
@@ -20,6 +21,7 @@ cable: &cable
   port: <%= Settings.database.cable.port %>
   username: <%= Settings.database.cable.username %>
   password: <%= Settings.database.cable.password %>
+  migrations_paths: db/cable_migrate
 
 development:
   primary:
