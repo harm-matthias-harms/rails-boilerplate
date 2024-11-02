@@ -8,13 +8,20 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 cache: &cache
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   host: <%= Settings.database.cache.host %>
   port: <%= Settings.database.cache.port %>
   username: <%= Settings.database.cache.username %>
   password: <%= Settings.database.cache.password %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  migrations_paths: db/cache_migrate
+
+cable: &cable
+  <<: *default
+  host: <%= Settings.database.cable.host %>
+  port: <%= Settings.database.cable.port %>
+  username: <%= Settings.database.cable.username %>
+  password: <%= Settings.database.cable.password %>
+  migrations_paths: db/cable_migrate
 
 development:
   primary:
@@ -23,6 +30,9 @@ development:
   cache:
     <<: *cache
     database: cache_development
+  cable:
+    <<: *cable
+    database: cable_development
 
 test:
   primary:
@@ -36,3 +46,6 @@ production:
   cache:
     <<: *cache
     database: cache_production
+  cable:
+    <<: *cable
+    database: cable_production

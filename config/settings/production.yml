@@ -9,5 +9,8 @@ database:
     port: 5432
     username:
     password:
-redis:
-  url:
+  cable:
+    host:
+    port: 5432
+    username:
+    password:

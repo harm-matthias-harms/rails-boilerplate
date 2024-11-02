@@ -80,6 +80,12 @@ Config.setup do |config|
           required(:username).filled(:string)
           required(:password).filled(:string)
         end
+        required(:cable).schema do
+          required(:host).filled(:string)
+          required(:port).filled(:integer)
+          required(:username).filled(:string)
+          required(:password).filled(:string)
+        end
       end
       required(:mail).schema do
         required(:sender).filled(:string)
@@ -105,9 +111,6 @@ Config.setup do |config|
             end
           end
         end
-      end
-      required(:redis).schema do
-        required(:url).filled(:string)
       end
       if Rails.env.production?
         required(:s3).schema do
