@@ -71,7 +71,7 @@ group :development do
   gem 'listen', '3.9.0'
   gem 'lookbook', '2.3.4'
 
-  gem 'annotate', '3.2.0', require: false
+  gem 'annotaterb', '4.13.0'
   gem 'brakeman', '6.2.2', require: false
   gem 'database_consistency', '1.7.26', require: false
   gem 'haml_lint', '0.59.0', require: false

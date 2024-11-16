@@ -9,6 +9,7 @@ class Identity < ApplicationRecord
   validates :provider, inclusion: { in: Settings.sso.keys.map(&:to_s) }
 end
 
+# rubocop:disable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments
 # ## Schema Information
 #
 # Table name: `identities`
@@ -18,11 +19,11 @@ end
 # Name              | Type               | Attributes
 # ----------------- | ------------------ | ---------------------------
 # **`id`**          | `uuid`             | `not null, primary key`
-# **`provider`**    | `string`           | `not null`
-# **`uid`**         | `string`           | `not null`
+# **`provider`**    | `string`           | `not null, indexed => [uid], indexed => [user_id]`
+# **`uid`**         | `string`           | `not null, indexed => [provider]`
 # **`created_at`**  | `datetime`         | `not null`
 # **`updated_at`**  | `datetime`         | `not null`
-# **`user_id`**     | `uuid`             | `not null`
+# **`user_id`**     | `uuid`             | `not null, indexed => [provider], indexed`
 #
 # ### Indexes
 #
@@ -40,3 +41,4 @@ end
 # * `fk_rails_...` (_ON DELETE => cascade_):
 #     * **`user_id => users.id`**
 #
+# rubocop:enable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments
