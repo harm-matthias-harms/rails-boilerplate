@@ -10,6 +10,7 @@ class Ahoy::Event < ApplicationRecord
   belongs_to :user, optional: true
 end
 
+# rubocop:disable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments
 # ## Schema Information
 #
 # Table name: `ahoy_events`
@@ -19,11 +20,11 @@ end
 # Name              | Type               | Attributes
 # ----------------- | ------------------ | ---------------------------
 # **`id`**          | `uuid`             | `not null, primary key`
-# **`name`**        | `string`           |
-# **`properties`**  | `jsonb`            |
-# **`time`**        | `datetime`         |
-# **`user_id`**     | `uuid`             |
-# **`visit_id`**    | `uuid`             |
+# **`name`**        | `string`           | `indexed => [time]`
+# **`properties`**  | `jsonb`            | `indexed`
+# **`time`**        | `datetime`         | `indexed => [name]`
+# **`user_id`**     | `uuid`             | `indexed`
+# **`visit_id`**    | `uuid`             | `indexed`
 #
 # ### Indexes
 #
@@ -37,3 +38,4 @@ end
 # * `index_ahoy_events_on_visit_id`:
 #     * **`visit_id`**
 #
+# rubocop:enable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments

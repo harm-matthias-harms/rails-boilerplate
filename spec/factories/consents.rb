@@ -10,6 +10,7 @@ FactoryBot.define do
   end
 end
 
+# rubocop:disable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments
 # ## Schema Information
 #
 # Table name: `consents`
@@ -26,7 +27,7 @@ end
 # **`user_agent`**  | `text`             | `not null`
 # **`created_at`**  | `datetime`         | `not null`
 # **`updated_at`**  | `datetime`         | `not null`
-# **`user_id`**     | `uuid`             | `not null`
+# **`user_id`**     | `uuid`             | `not null, indexed`
 #
 # ### Indexes
 #
@@ -38,3 +39,4 @@ end
 # * `fk_rails_...` (_ON DELETE => cascade_):
 #     * **`user_id => users.id`**
 #
+# rubocop:enable Lint/RedundantCopDisableDirective, Layout/LineLength, Style/AsciiComments
