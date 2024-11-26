@@ -346,7 +346,7 @@ GEM
     parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
-    pay (8.2.0)
+    pay (8.2.1)
       rails (>= 6.0.0)
     pg (1.5.9)
     propshaft (1.1.0)
@@ -594,7 +594,7 @@ DEPENDENCIES
   omniauth (= 2.1.2)
   omniauth-google-oauth2 (= 1.2.0)
   omniauth-rails_csrf_protection (= 1.0.2)
-  pay (= 8.2.0)
+  pay (= 8.2.1)
   pg (= 1.5.9)
   propshaft (= 1.1.0)
   puma (= 6.5.0)
