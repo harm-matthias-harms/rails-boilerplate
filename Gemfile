@@ -52,7 +52,7 @@ gem 'bootsnap', '1.18.4', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', '1.9.2', platforms: %i[mri mingw x64_mingw]
+  gem 'debug', '1.10.0', platforms: %i[mri mingw x64_mingw]
 
   gem 'factory_bot_rails', '6.4.4'
   gem 'rspec-rails', '7.1.0'
