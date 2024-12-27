@@ -75,6 +75,7 @@ group :development do
   gem 'brakeman', '6.2.2', require: false
   gem 'database_consistency', '2.0.2', require: false
   gem 'haml_lint', '0.59.0', require: false
+  gem 'hotwire-spark', '0.1.12'
   gem 'i18n-tasks', '1.0.14', require: false
   gem 'rubocop', '1.69.2', require: false
   gem 'rubocop-capybara', '2.21.0', require: false
@@ -112,6 +113,7 @@ gem 'omniauth-google-oauth2', '1.2.0'
 gem 'omniauth-rails_csrf_protection', '1.0.2'
 gem 'pay', '8.3.0'
 gem 'pundit', '2.4.0'
+gem 'query_count', '1.1.1'
 gem 'rails-healthcheck', '1.4.0'
 gem 'redcarpet', '3.6.0'
 gem 'service_actor', '3.9.4'
