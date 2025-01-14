@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "standard": "17.1.2",
-    "stylelint": "16.13.1",
+    "stylelint": "16.13.2",
     "stylelint-config-standard-scss": "14.0.0"
   },
   "stylelint": {
