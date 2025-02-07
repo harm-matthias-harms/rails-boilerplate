@@ -73,7 +73,7 @@ group :development do
 
   gem 'annotaterb', '4.13.0'
   gem 'brakeman', '7.0.0', require: false
-  gem 'database_consistency', '2.0.3', require: false
+  gem 'database_consistency', '2.0.4', require: false
   gem 'haml_lint', '0.60.0', require: false
   gem 'hotwire-spark', '0.1.13'
   gem 'i18n-tasks', '1.0.14', require: false
