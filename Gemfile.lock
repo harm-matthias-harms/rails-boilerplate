@@ -122,7 +122,7 @@ GEM
     crass (1.0.6)
     css_parser (1.21.0)
       addressable
-    cssbundling-rails (1.4.2)
+    cssbundling-rails (1.4.3)
       railties (>= 6.0.0)
     csv (3.3.2)
     database_cleaner-active_record (2.2.0)
@@ -599,7 +599,7 @@ DEPENDENCIES
   brakeman (= 7.0.0)
   capybara (= 3.40.0)
   config (= 5.5.2)
-  cssbundling-rails (= 1.4.2)
+  cssbundling-rails (= 1.4.3)
   database_cleaner-active_record (= 2.2.0)
   database_consistency (= 2.0.4)
   debug (= 1.10.0)
