@@ -1,12 +1,12 @@
 require:
   - rubocop-rspec_rails
-  - rubocop-capybara
 
 plugins:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
   - rubocop-factory_bot
+  - rubocop-capybara
 
 inherit_gem:
   pundit: config/rubocop-rspec.yml
