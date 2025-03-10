@@ -83,7 +83,7 @@ group :development do
   gem 'rubocop-performance', '1.24.0', require: false
   gem 'rubocop-rails', '2.30.3', require: false
   gem 'rubocop-rspec', '3.5.0', require: false
-  gem 'rubocop-rspec_rails', '2.30.0', require: false
+  gem 'rubocop-rspec_rails', '2.31.0', require: false
 end
 
 group :test do
