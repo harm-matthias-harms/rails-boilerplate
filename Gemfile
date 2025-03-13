@@ -69,7 +69,7 @@ group :development do
   # gem "spring"
 
   gem 'listen', '3.9.0'
-  gem 'lookbook', '2.3.7'
+  gem 'lookbook', '2.3.8'
 
   gem 'annotaterb', '4.14.0'
   gem 'brakeman', '7.0.0', require: false
