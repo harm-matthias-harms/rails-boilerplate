@@ -74,7 +74,7 @@ group :development do
   gem 'annotaterb', '4.14.0'
   gem 'brakeman', '7.0.0', require: false
   gem 'database_consistency', '2.0.4', require: false
-  gem 'haml_lint', '0.61.0', require: false
+  gem 'haml_lint', '0.61.1', require: false
   gem 'hotwire-spark', '0.1.13'
   gem 'i18n-tasks', '1.0.15', require: false
   gem 'rubocop', '1.74.0', require: false
