@@ -655,7 +655,7 @@ DEPENDENCIES
   stripe (= 13.5.0)
   thruster (= 0.1.12)
   turbo-rails (= 2.0.13)
-  tzinfo-data (= 1.2025.1)
+  tzinfo-data (= 1.2025.2)
   valid_email2 (= 7.0.12)
   view_component (= 3.22.0)
   web-console (= 4.2.1)
