@@ -101,7 +101,7 @@ GEM
       safely_block (>= 0.4)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
-    brakeman (7.0.1)
+    brakeman (7.0.2)
       racc
     builder (3.3.0)
     capybara (3.40.0)
@@ -602,7 +602,7 @@ DEPENDENCIES
   annotaterb (= 4.14.0)
   blazer (= 3.2.1)
   bootsnap (= 1.18.4)
-  brakeman (= 7.0.1)
+  brakeman (= 7.0.2)
   capybara (= 3.40.0)
   config (= 5.5.2)
   cssbundling-rails (= 1.4.3)
