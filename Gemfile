@@ -72,7 +72,7 @@ group :development do
   gem 'lookbook', '2.3.8'
 
   gem 'annotaterb', '4.14.0'
-  gem 'brakeman', '7.0.1', require: false
+  gem 'brakeman', '7.0.2', require: false
   gem 'database_consistency', '2.0.4', require: false
   gem 'haml_lint', '0.61.1', require: false
   gem 'hotwire-spark', '0.1.13'
