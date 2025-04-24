@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Calendar Version
         id: calendar-version
-        uses: harm-matthias-harms/calendar-version@v1
+        uses: harm-matthias-harms/calendar-version@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: release-drafter/release-drafter@v6
