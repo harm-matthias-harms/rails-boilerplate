@@ -513,7 +513,7 @@ GEM
     service_actor-rails (1.0.0)
       rails (>= 4.2)
       service_actor
-    shoulda-matchers (6.4.0)
+    shoulda-matchers (6.5.0)
       activesupport (>= 5.2.0)
     simplecov (0.22.0)
       docile (~> 1.1)
@@ -646,7 +646,7 @@ DEPENDENCIES
   selenium-webdriver (= 4.31.0)
   service_actor (= 4.0.0)
   service_actor-rails (= 1.0.0)
-  shoulda-matchers (= 6.4.0)
+  shoulda-matchers (= 6.5.0)
   simplecov (= 0.22.0)
   simplecov-cobertura (= 2.1.0)
   solid_cable (= 3.0.7)
