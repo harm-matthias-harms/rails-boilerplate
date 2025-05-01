@@ -1,4 +1,3 @@
-name-template: '$RESOLVED_VERSION 🤖'
 commitish: main
 template: |
   ## What’s Changed
@@ -6,14 +5,14 @@ template: |
   $CHANGES
 
 categories:
-  - title: '🚀 Features'
-    label: 'feature'
-  - title: '🐛 Bug Fixes'
-    label: 'bug'
-  - title: '🏡 Chore'
-    label: 'chore'
-  - title: '🤓 Dependency Updates'
-    label: 'dependency'
+  - title: "🚀 Features"
+    label: "feature"
+  - title: "🐛 Bug Fixes"
+    label: "bug"
+  - title: "🏡 Chore"
+    label: "chore"
+  - title: "🤓 Dependency Updates"
+    label: "dependency"
 
 autolabeler:
   - label: bug
