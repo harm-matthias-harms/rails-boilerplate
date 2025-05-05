@@ -100,7 +100,7 @@ end
 
 gem 'active_record_doctor', '1.15.0'
 gem 'active_storage_validations', '2.0.3'
-gem 'ahoy_matey', '5.3.0'
+gem 'ahoy_matey', '5.4.0'
 gem 'blazer', '3.3.0'
 gem 'config', '5.5.2'
 gem 'devise', '4.9.4'
