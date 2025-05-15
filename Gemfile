@@ -45,7 +45,7 @@ gem 'cssbundling-rails', '1.4.3'
 gem 'tzinfo-data', '1.2025.2', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '1.18.5', require: false
+gem 'bootsnap', '1.18.6', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
