@@ -77,7 +77,7 @@ group :development do
   gem 'haml_lint', '0.62.0', require: false
   gem 'hotwire-spark', '0.1.13'
   gem 'i18n-tasks', '1.0.15', require: false
-  gem 'rubocop', '1.75.5', require: false
+  gem 'rubocop', '1.75.6', require: false
   gem 'rubocop-capybara', '2.22.1', require: false
   gem 'rubocop-factory_bot', '2.27.1', require: false
   gem 'rubocop-performance', '1.25.0', require: false
